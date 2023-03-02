@@ -3216,8 +3216,7 @@ h1.page-title + .tag-cloud-list {
     transform: scale(0.7);
   }
 }
-.fb_dialog,
-.fb-customerchat {
+#chatra:not(.chatra--expanded) {
   visibility: hidden !important;
   width: 1px !important;
   height: 1px !important;
