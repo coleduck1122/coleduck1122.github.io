@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Coleduck&#39;s Blog</title>
+  
+  <subtitle>hello world</subtitle>
+  <link href="https://coleduck1122.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://coleduck1122.github.io/"/>
+  <updated>2023-03-05T09:20:42.320Z</updated>
+  <id>https://coleduck1122.github.io/</id>
+  
+  <author>
+    <name>Coleduck</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python与数据科学-数据类型(第2章)</title>
+    <link href="https://coleduck1122.github.io/2023/03/05/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6(2)/"/>
+    <id>https://coleduck1122.github.io/2023/03/05/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6(2)/</id>
+    <published>2023-03-05T09:10:10.472Z</published>
+    <updated>2023-03-05T09:20:42.320Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><p>(单选题) 利用print()格式化输出,哪个选项用于控制浮点数的小数点后两位输出?<br>A   {.2}<br>B   {:.2}<br>C   {:.2f}<br>D   {.2f}</p></li><li><p>(单选题) 对于字符串 s = ‘jwtent’,下列表达式的输出和其他三个不同的是( )<br>A   s[::-5]<br>B   s[0] + s[-1]<br>C   s[::-1][::-5]<br>D   s[::5]</p></li><li><p>(单选题) 下列运算符使用错误的是( )<br>A   3*’abc’<br>B   [1,2,3]+[4,5,6]<br>C   (-10) % (-3)<br>D   1+’a’</p></li><li><p>(单选题) 关于&lt;模板字符串&gt;.format(&lt;逗号分隔的参数&gt;)中的内容描述,正确的选项是:<br>A   模板字符串里的格式控制信息语法格式是:{&lt;参数序号&gt;:&lt;格式控制标记&gt;},参数序号是从1开始<br>B   格式控制信息{:*^10}表示这个位置是最大长度为10的整数<br>C   格式控制信息{2:0&gt;7f}里面的‘f’表示这个位置是一个整数<br>D   逗号分隔的参数可以是变量,也可以是函数</p></li><li><p>(单选题) 关于 a and b 的描述错误的是 ( )<br>A   若 a=False, b=False 则 a and b 的值为 False<br>B   若 a=False, b=True 则 a and b 的值为 False<br>C   若 a=True, b=False 则 a and b 的值为 True<br>D   若 a=True,b=True 则 a and b 的值为 True</p></li><li><p>(单选题) 关于Python数据类型的描述,正确的选项是:<br>A   运算符+、-、*、/ 等跟赋值符号 = 相连,形成增强赋值操作符<br>B   内置函数divmod(x,y)的运算结果是两个整数:x除y的整数商以及余数<br>C   函数ord(x)是返回字符串x对应的Unicode编码<br>D   函数lower(x)是将字符串x的首字母小写</p></li><li><p>(单选题) 关于Python语言的注释语句的描述,正确的是:<br>A   ‘’’开头的语句也表示注释,用法跟#一样<br>B   #之后的语句被解释器解释,但不执行<br>C   以#开头的语句是注释<br>D   #注释符可以注释多行</p></li><li><p>(单选题) 以下不是Python数据类型的是:<br>A   列表<br>B   整数<br>C   字符串<br>D   实数</p></li><li><p>(单选题) 以下关于程序设计语言的描述,正确的选项是:<br>A   Python语言是一种面向过程,也是面向对象的语言<br>B   Python语言与平台相关<br>C   Python语言的生态库都是官方开发的<br>D   Python语言是网络通用语言</p></li><li><p>(单选题) 执行下述程序的输出结果是:<br>ds = {‘eng’:2,’math’:6,’comp’:9,’PE’:4}<br>print(ds.pop(max(ds.keys()), 0))<br>A   math<br>B   PE<br>C   6<br>D   4</p></li><li><p>(单选题) 下面不属于Python保留字的是:<br>A   import<br>B   type<br>C   elif<br>D   def</p></li><li><p>(单选题) 设a.txt的内容是: a,b,c,d 以下程序执行结果是: with open(‘a.txt’,’r’) as f:<br>print(f.read().split(‘,’))<br>A   a, b, c, d<br>B   [a, b, c, d]<br>C   ‘a’, ‘b’, ‘c’, ‘d’<br>D   [‘a’, ‘b’, ‘c’, ‘d’]</p></li><li><p>(单选题) 以下程序的输出结果,可能的选项是:<br>ds = {‘av’:2,’vr’:4,’ls’:9,’path’:6}<br>print(ds.popitem(), len(ds))<br>A   (‘path’, 6) 3<br>B   (‘av’, 2) 4<br>C   (‘vr’, 2) 3<br>D   (‘path’, 6) 4</p></li><li><p>(单选题) 一般情况下, 整数用十进制表示,如果用其他进制表示一个数,错误的描述选项是:()<br>A   0x1010表示一个十六进制数<br>B   1010b表示一个二进制数<br>C   0o1010表示一个八进制数<br>D   0b1010表示一个二进制数</p></li><li><p>(单选题) 下列关于 Python 变量的说法错误的是 ( )<br>A   变量无须指定类型<br>B   变量不必事先声明但区分大小写<br>C   变量无须先创建和赋值而直接使用<br>D   可以采用使用 del 关键字释放变量</p></li><li><p>(单选题) 以下哪个选项是 print((9<strong>0.5)*(9</strong>0.5)==3)的执行结果( )<br>A   9<br>B   False<br>C   0<br>D   True</p></li><li><p>(单选题) 字符串是一个字符序列,给字符串s,以下表示s从右侧向左第三个字符的是:<br>A   s[:-3]<br>B   s[0:-3]<br>C   s[3]<br>D   s[-3]</p></li><li><p>(单选题) 下面不能创建一个集合的语句是( )<br>A   s3=(1,2,3,4)<br>B   s1=set()<br>C   s2=set(“abcd”)<br>D   s4=frozenset((3,2,1))</p></li><li><p>(单选题) 关于以下程序输出结果的描述,正确的选项是:<br>l = [1,2,3,4,5,6,7]<br>print(l.pop(0), len(l))<br>A   0 7<br>B   0 6<br>C   1 7<br>D   1 6</p></li><li><p>(单选题) 执行下面的操作后,list2 的值为( )<br>list1 = [4,5,6]<br>list2 = list1<br>list1[2] = 3<br>A   [4,5,6]<br>B   [4,5,3]<br>C   [4,3,6]<br>D   其他选项都不正确</p></li><li><p>(单选题) 以下关于Python语言中“缩进”说法正确的是:<br>A   缩进是非强制的,仅为了提高代码可读性<br>B   缩进统一为4个空格<br>C   缩进在程序中长度统一且强制使用<br>D   缩进可以用在任何语句之后,表示语句间的包含关系</p></li><li><p>(单选题) 对于表达式 a = [3, 4, 5, 6, 7, 9, 11],以下输出结果正确的是( )<br>A   print(a[0:-1]) =&gt; [3,4,5,6,7,9]<br>B   print(a[0:0]) =&gt; [3]<br>C   print(a[1:-1]) =&gt; [4,5,6,7,9,11]<br>D   print(a[3:7]) =&gt; [6,7,9,11,0]</p></li><li><p>(单选题) 有表达式 x = [0, -1, 0, None, (), [5,8,10]],则 print(len(x))的结果为( )<br>A   4<br>B   5<br>C   8<br>D   6</p></li><li><p>(单选题) 关于组合数据类型的描述,正确的选项是:<br>A   序列类型的元素可以用reverse()方法交换相邻元素的位置<br>B   列表类型里的元素要求是同一种数据类型<br>C   Python中最常用的映射类型的典型代表是字典类型<br>D   元组采用大括号方式表示</p></li></ol><ol start="25"><li>(单选题) 以下关于Python程序的基本语法元素,错误的描述是:<br>A   变量的命名规则之一是名字的首位不能是数字<br>B   变量是由用户定义的用来保存和表示数据的一种语法元素<br>C   Python语言只能用4个空格的缩进来实现程序的强制可读性<br>D   变量标识符是一个字符串,长度是没有限制的</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;(单选题) 利用print()格式化输出,哪个选项用于控制浮点数的小数点后两位输出?&lt;br&gt;A   {.2}&lt;br&gt;B   {:.2}&lt;br&gt;C   {:.2f}&lt;br&gt;D   {.2f}&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;(单选题) 对于字符串 s = </summary>
+      
+    
+    
+    
+    <category term="专业课" scheme="https://coleduck1122.github.io/categories/%E4%B8%93%E4%B8%9A%E8%AF%BE/"/>
+    
+    
+    <category term="Python" scheme="https://coleduck1122.github.io/tags/Python/"/>
+    
+    <category term="数据科学" scheme="https://coleduck1122.github.io/tags/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/"/>
+    
+    <category term="作业" scheme="https://coleduck1122.github.io/tags/%E4%BD%9C%E4%B8%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>英语学习之每日10单词系列(3)</title>
+    <link href="https://coleduck1122.github.io/2023/03/05/%E6%AF%8F%E6%97%A5%E5%8D%95%E8%AF%8D%E8%8B%B1(3)/"/>
+    <id>https://coleduck1122.github.io/2023/03/05/%E6%AF%8F%E6%97%A5%E5%8D%95%E8%AF%8D%E8%8B%B1(3)/</id>
+    <published>2023-03-05T00:33:07.150Z</published>
+    <updated>2023-03-05T08:47:01.634Z</updated>
+    
+    <content type="html"><![CDATA[<table><thead><tr><th align="center">序号</th><th align="center">英文</th><th align="center">释义1</th><th align="center">释义2</th><th align="center">释义3</th></tr></thead><tbody><tr><td align="center">1.</td><td align="center">reproach</td><td align="center">v.责备</td><td align="center">n.指责</td><td align="center"></td></tr><tr><td align="center">2.</td><td align="center">toxic</td><td align="center">adj.有毒的</td><td align="center">adj.恶毒的</td><td align="center"></td></tr><tr><td align="center">3.</td><td align="center">offset</td><td align="center">v.抵消</td><td align="center">n.补偿</td><td align="center">adj.胶印的</td></tr><tr><td align="center">4.</td><td align="center">conference</td><td align="center">n.会议</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">5.</td><td align="center">propaganda</td><td align="center">n.宣传</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">6.</td><td align="center">extravagant</td><td align="center">adj.奢侈的</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">7.</td><td align="center">voluntary</td><td align="center">adj.志愿的</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">8.</td><td align="center">deduce</td><td align="center">v.推断</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">9.</td><td align="center">provoke</td><td align="center">v.挑衅</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">10.</td><td align="center">passive</td><td align="center">adj.被动的</td><td align="center">adj.消极的</td><td align="center"></td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;序号&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;英文&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;释义1&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;释义2&lt;/th&gt;
+&lt;th align</summary>
+      
+    
+    
+    
+    <category term="英语学习" scheme="https://coleduck1122.github.io/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="一起背单词" scheme="https://coleduck1122.github.io/tags/%E4%B8%80%E8%B5%B7%E8%83%8C%E5%8D%95%E8%AF%8D/"/>
+    
+    <category term="英语" scheme="https://coleduck1122.github.io/tags/%E8%8B%B1%E8%AF%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>日语学习之每日10单词系列(3)</title>
+    <link href="https://coleduck1122.github.io/2023/03/05/%E6%AF%8F%E6%97%A5%E5%8D%95%E8%AF%8D%E6%97%A5(3)/"/>
+    <id>https://coleduck1122.github.io/2023/03/05/%E6%AF%8F%E6%97%A5%E5%8D%95%E8%AF%8D%E6%97%A5(3)/</id>
+    <published>2023-03-05T00:32:56.497Z</published>
+    <updated>2023-03-05T08:39:51.756Z</updated>
+    
+    <content type="html"><![CDATA[<table><thead><tr><th align="center">序号</th><th align="center">汉字</th><th align="center">平假名</th><th align="center">罗马音</th><th align="center">释义</th></tr></thead><tbody><tr><td align="center">1.</td><td align="center"></td><td align="center">どうも</td><td align="center">doumo</td><td align="center">非常，实在是</td></tr><tr><td align="center">2.</td><td align="center"></td><td align="center">はい</td><td align="center">hai</td><td align="center">(应答)是的</td></tr><tr><td align="center">3.</td><td align="center"></td><td align="center">いいえ</td><td align="center">iie</td><td align="center">(否定回答)不是</td></tr><tr><td align="center">4.</td><td align="center"></td><td align="center">あっ</td><td align="center">altu</td><td align="center">(感动或惊讶)啊</td></tr><tr><td align="center">5.</td><td align="center">本</td><td align="center">ほん</td><td align="center">hon</td><td align="center">书籍</td></tr><tr><td align="center">6.</td><td align="center"></td><td align="center">かばん</td><td align="center">kaban</td><td align="center">包，公文包</td></tr><tr><td align="center">7.</td><td align="center">ノート</td><td align="center"></td><td align="center">no-to</td><td align="center">笔记本，备忘录</td></tr><tr><td align="center">8.</td><td align="center">鉛筆</td><td align="center">えんぴつ</td><td align="center">enpitsu</td><td align="center">铅笔</td></tr><tr><td align="center">9.</td><td align="center">傘</td><td align="center">かさ</td><td align="center">kasa</td><td align="center">伞</td></tr><tr><td align="center">10.</td><td align="center">靴</td><td align="center">くつ</td><td align="center">kutsu</td><td align="center">鞋</td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;序号&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;汉字&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;平假名&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;罗马音&lt;/th&gt;
+&lt;th align</summary>
+      
+    
+    
+    
+    <category term="日语学习" scheme="https://coleduck1122.github.io/categories/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="日语" scheme="https://coleduck1122.github.io/tags/%E6%97%A5%E8%AF%AD/"/>
+    
+    <category term="一起背单词" scheme="https://coleduck1122.github.io/tags/%E4%B8%80%E8%B5%B7%E8%83%8C%E5%8D%95%E8%AF%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>英语学习之每日10单词系列(2)</title>
+    <link href="https://coleduck1122.github.io/2023/03/03/%E6%AF%8F%E6%97%A5%E5%8D%95%E8%AF%8D%E8%8B%B1(2)/"/>
+    <id>https://coleduck1122.github.io/2023/03/03/%E6%AF%8F%E6%97%A5%E5%8D%95%E8%AF%8D%E8%8B%B1(2)/</id>
+    <published>2023-03-03T00:42:51.338Z</published>
+    <updated>2023-03-05T08:47:07.718Z</updated>
+    
+    <content type="html"><![CDATA[<table><thead><tr><th align="center">序号</th><th align="center">英文</th><th align="center">释义1</th><th align="center">释义2</th><th align="center">释义3</th></tr></thead><tbody><tr><td align="center">1.</td><td align="center">endure</td><td align="center">v.持续</td><td align="center">v.忍受</td><td align="center"></td></tr><tr><td align="center">2.</td><td align="center">recreation</td><td align="center">n.娱乐活动</td><td align="center">n.重建</td><td align="center"></td></tr><tr><td align="center">3.</td><td align="center">monarch</td><td align="center">n.帝王</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">4.</td><td align="center">sturdy</td><td align="center">adj.坚固的</td><td align="center">n.(羊的)晕倒病</td><td align="center"></td></tr><tr><td align="center">5.</td><td align="center">rotten</td><td align="center">adj.腐烂的</td><td align="center">adv.很大程度上</td><td align="center"></td></tr><tr><td align="center">6.</td><td align="center">butts</td><td align="center">n.屁股</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">7.</td><td align="center">glossary</td><td align="center">n.词汇表</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">8.</td><td align="center">leaf</td><td align="center">n.叶子</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">9.</td><td align="center">procedure</td><td align="center">n.程序</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">10.</td><td align="center">specialty</td><td align="center">n.专长</td><td align="center"></td><td align="center"></td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;序号&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;英文&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;释义1&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;释义2&lt;/th&gt;
+&lt;th align</summary>
+      
+    
+    
+    
+    <category term="英语学习" scheme="https://coleduck1122.github.io/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="一起背单词" scheme="https://coleduck1122.github.io/tags/%E4%B8%80%E8%B5%B7%E8%83%8C%E5%8D%95%E8%AF%8D/"/>
+    
+    <category term="英语" scheme="https://coleduck1122.github.io/tags/%E8%8B%B1%E8%AF%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>日语学习之每日10单词系列(2)</title>
+    <link href="https://coleduck1122.github.io/2023/03/03/%E6%AF%8F%E6%97%A5%E5%8D%95%E8%AF%8D%E6%97%A5(2)/"/>
+    <id>https://coleduck1122.github.io/2023/03/03/%E6%AF%8F%E6%97%A5%E5%8D%95%E8%AF%8D%E6%97%A5(2)/</id>
+    <published>2023-03-03T00:42:21.774Z</published>
+    <updated>2023-03-03T05:23:28.603Z</updated>
+    
+    <content type="html"><![CDATA[<table><thead><tr><th align="center">序号</th><th align="center">汉字</th><th align="center">平假名</th><th align="center">罗马音</th><th align="center">释义</th></tr></thead><tbody><tr><td align="center">1.</td><td align="center">研修生</td><td align="center">けんしゅうせい</td><td align="center">kenshuusei</td><td align="center">进修生</td></tr><tr><td align="center">2.</td><td align="center">企業</td><td align="center">きぎょう</td><td align="center">kigyou</td><td align="center">企业</td></tr><tr><td align="center">3.</td><td align="center">大学</td><td align="center">だいがく</td><td align="center">daigaku</td><td align="center">大学</td></tr><tr><td align="center">4.</td><td align="center">父親</td><td align="center">ちち</td><td align="center">chichi</td><td align="center">父亲</td></tr><tr><td align="center">5.</td><td align="center">課長</td><td align="center">かちょう</td><td align="center">kachou</td><td align="center">科长</td></tr><tr><td align="center">6.</td><td align="center">社長</td><td align="center">しゃちょう</td><td align="center">shachou</td><td align="center">公司经理</td></tr><tr><td align="center">7.</td><td align="center">出迎え</td><td align="center">でむかえ</td><td align="center">demukae</td><td align="center">迎接</td></tr><tr><td align="center">8.</td><td align="center">あの人</td><td align="center">あのひと</td><td align="center">anohito</td><td align="center">他/她/那个人</td></tr><tr><td align="center">9.</td><td align="center">私</td><td align="center">わたぃ</td><td align="center">watashi</td><td align="center">我</td></tr><tr><td align="center">10.</td><td align="center">貴方</td><td align="center">あなた</td><td align="center">anata</td><td align="center">你/妻子对丈夫的称呼</td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;序号&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;汉字&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;平假名&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;罗马音&lt;/th&gt;
+&lt;th align</summary>
+      
+    
+    
+    
+    <category term="日语学习" scheme="https://coleduck1122.github.io/categories/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="日语" scheme="https://coleduck1122.github.io/tags/%E6%97%A5%E8%AF%AD/"/>
+    
+    <category term="一起背单词" scheme="https://coleduck1122.github.io/tags/%E4%B8%80%E8%B5%B7%E8%83%8C%E5%8D%95%E8%AF%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>英语学习之每日10单词系列(1)</title>
+    <link href="https://coleduck1122.github.io/2023/03/02/%E6%AF%8F%E6%97%A5%E5%8D%95%E8%AF%8D%E8%8B%B1(1)/"/>
+    <id>https://coleduck1122.github.io/2023/03/02/%E6%AF%8F%E6%97%A5%E5%8D%95%E8%AF%8D%E8%8B%B1(1)/</id>
+    <published>2023-03-02T11:11:04.753Z</published>
+    <updated>2023-03-05T08:47:09.910Z</updated>
+    
+    <content type="html"><![CDATA[<table><thead><tr><th align="center">序号</th><th align="center">英文</th><th align="center">释义1</th><th align="center">释义2</th><th align="center">释义3</th></tr></thead><tbody><tr><td align="center">1.</td><td align="center">response</td><td align="center">n.反应</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">2.</td><td align="center">numerous</td><td align="center">adj.许多的</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">3.</td><td align="center">guarantee</td><td align="center">n.保证</td><td align="center">v.确保</td><td align="center"></td></tr><tr><td align="center">4.</td><td align="center">mental</td><td align="center">adj.心理的/精神的</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">5.</td><td align="center">galaxy</td><td align="center">n.星系</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">6.</td><td align="center">despises</td><td align="center">vt.蔑视</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">7.</td><td align="center">sufficient</td><td align="center">adj.足够的</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">8.</td><td align="center">layman</td><td align="center">n.外行</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">9.</td><td align="center">urge</td><td align="center">n.强烈的愿望</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">10.</td><td align="center">endeavor</td><td align="center">n.尽力</td><td align="center">v.努力</td><td align="center"></td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;序号&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;英文&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;释义1&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;释义2&lt;/th&gt;
+&lt;th align</summary>
+      
+    
+    
+    
+    <category term="英语学习" scheme="https://coleduck1122.github.io/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="一起背单词" scheme="https://coleduck1122.github.io/tags/%E4%B8%80%E8%B5%B7%E8%83%8C%E5%8D%95%E8%AF%8D/"/>
+    
+    <category term="英语" scheme="https://coleduck1122.github.io/tags/%E8%8B%B1%E8%AF%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>每周总结——第1周</title>
+    <link href="https://coleduck1122.github.io/2023/03/02/%E6%AF%8F%E5%91%A8%E6%80%BB%E7%BB%93(1)/"/>
+    <id>https://coleduck1122.github.io/2023/03/02/%E6%AF%8F%E5%91%A8%E6%80%BB%E7%BB%93(1)/</id>
+    <published>2023-03-02T08:56:42.847Z</published>
+    <updated>2023-03-05T08:57:06.812Z</updated>
+    
+    <content type="html"><![CDATA[<p>2023.3.2 (星期四)</p><p>今天开始重新搭建博客，使用了叫butterfly的一个主题，我觉得效果很不错，界面也很酷炫<br>之前我就搭建了一个已经，也建的挺不错的，但是我建立起来之后就一直没有维护使用过。。。<br>可能是上学期实在太忙了，虽然这学期也很忙，不过我觉得还是要有一个坚持写博客的习惯<br>我决定在上面分享一些我的学习笔记，以及一些每日打卡任务，每周对自己一个总结，也算是对自己的一个监督了<br>嗨害嗨，这学期我还有很多想做的事情，这下感觉时间更加不够用了。。</p><p>2023.3.3 (星期五)<br>今天的目标：<br>作业：Python数据科学、<br>习惯：背日英单词各10个，练字5面<br>目标：完善博客的音乐，友链页面和图库页面增加部分信息</p><p>今天的结果：博客更加完善了，评论系统也开启了，但是貌似存在bug，后续还是需要修理</p><p>2023.3.4 (星期六)<br>上午在思考人生，也构思了一款双人博弈卡牌游戏，但是存在很严重的问题<br>中午出发和室友一起去西湖逛灵隐寺，因为最近不用门票<br>走了一天，在路上做过两次公交车，但是由于交通实在是太堵塞了，所以浪费了很多时间。</p><p>2023.3.5 (星期天)<br>今天开始最后一次实训课了。<br>下午回到寝室了，任务完成，作业也上交了，完成的还算不错，界面我也很满意<br>是个小网页，能实现记作业的功能，自己用用还行，但是可能不是很实用吧<br>因为大家记作业肯定都是用手机的备忘录，谁还会打开电脑记作业呀。。。<br>以及明天又要上课了，今晚得把作业都补补完</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;2023.3.2 (星期四)&lt;/p&gt;
+&lt;p&gt;今天开始重新搭建博客，使用了叫butterfly的一个主题，我觉得效果很不错，界面也很酷炫&lt;br&gt;之前我就搭建了一个已经，也建的挺不错的，但是我建立起来之后就一直没有维护使用过。。。&lt;br&gt;可能是上学期实在太忙了，虽然这学期也很忙</summary>
+      
+    
+    
+    
+    <category term="小习惯" scheme="https://coleduck1122.github.io/categories/%E5%B0%8F%E4%B9%A0%E6%83%AF/"/>
+    
+    
+    <category term="总结" scheme="https://coleduck1122.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>日语学习之每日10单词系列(1)</title>
+    <link href="https://coleduck1122.github.io/2023/03/02/%E6%AF%8F%E6%97%A5%E5%8D%95%E8%AF%8D%E6%97%A5(1)/"/>
+    <id>https://coleduck1122.github.io/2023/03/02/%E6%AF%8F%E6%97%A5%E5%8D%95%E8%AF%8D%E6%97%A5(1)/</id>
+    <published>2023-03-02T08:54:56.918Z</published>
+    <updated>2023-03-03T00:44:25.466Z</updated>
+    
+    <content type="html"><![CDATA[<table><thead><tr><th align="center">序号</th><th align="center">汉字</th><th align="center">平假名</th><th align="center">罗马音</th><th align="center">释义</th></tr></thead><tbody><tr><td align="center">1.</td><td align="center">中国人</td><td align="center">ちゅうごくじん</td><td align="center">chuugokujin</td><td align="center">中国人</td></tr><tr><td align="center">2.</td><td align="center">韓国人</td><td align="center">かんこくじん</td><td align="center">kankokujin</td><td align="center">韩国人</td></tr><tr><td align="center">3.</td><td align="center">アメリカ人</td><td align="center">あめりかじん</td><td align="center">amerikajin</td><td align="center">美国人</td></tr><tr><td align="center">4.</td><td align="center">学生</td><td align="center">がくせい</td><td align="center">gakusei</td><td align="center">学生</td></tr><tr><td align="center">5.</td><td align="center">先生</td><td align="center">せんせい</td><td align="center">sensei</td><td align="center">老师</td></tr><tr><td align="center">6.</td><td align="center">留学生</td><td align="center">りゅうがくせい</td><td align="center">ryuugakusei</td><td align="center">留学生</td></tr><tr><td align="center">7.</td><td align="center">教授</td><td align="center">きょうじゅ</td><td align="center">kyoujiu</td><td align="center">教授</td></tr><tr><td align="center">8.</td><td align="center">社員</td><td align="center">しゃいん</td><td align="center">shain</td><td align="center">社员</td></tr><tr><td align="center">9.</td><td align="center">会社員</td><td align="center">かいしゃいん</td><td align="center">kaishain</td><td align="center">公司职员</td></tr><tr><td align="center">10.</td><td align="center">店員</td><td align="center">てんいん</td><td align="center">tennin</td><td align="center">店员</td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;序号&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;汉字&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;平假名&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;罗马音&lt;/th&gt;
+&lt;th align</summary>
+      
+    
+    
+    
+    <category term="日语学习" scheme="https://coleduck1122.github.io/categories/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="日语" scheme="https://coleduck1122.github.io/tags/%E6%97%A5%E8%AF%AD/"/>
+    
+    <category term="一起背单词" scheme="https://coleduck1122.github.io/tags/%E4%B8%80%E8%B5%B7%E8%83%8C%E5%8D%95%E8%AF%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++入门(1)</title>
+    <link href="https://coleduck1122.github.io/2023/03/02/C++%E5%85%A5%E9%97%A8(1)/"/>
+    <id>https://coleduck1122.github.io/2023/03/02/C++%E5%85%A5%E9%97%A8(1)/</id>
+    <published>2023-03-02T08:51:04.712Z</published>
+    <updated>2023-03-05T09:02:44.387Z</updated>
+    
+    <content type="html"><![CDATA[<p>第一行代码</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    cout &lt;&lt; &quot;Hello World!&quot; &lt;&lt; endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>输入与输出的用法，输入用cin，输出用cout，用 &gt;&gt; 和 &lt;&lt; 来进行传输</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;string&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    </span><br><span class="line">    string name;</span><br><span class="line">    int age;</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; name &gt;&gt; age;</span><br><span class="line">    cout &lt;&lt; &quot;Hello my name is&quot; &lt;&lt; name </span><br><span class="line">         &lt;&lt; &quot;, I&#x27;m &quot; &lt;&lt; age &lt;&lt; &quot;years old!&quot; &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>运算符</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;string&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    </span><br><span class="line">    int a, b = 20;</span><br><span class="line">    /*</span><br><span class="line">    等价于</span><br><span class="line">    int a;</span><br><span class="line">    int b = 20;</span><br><span class="line">    一般来说，定义变量的时候都要指定一个初始值，</span><br><span class="line">    像变量a那样的定义方式，其实a的值是不确定的，</span><br><span class="line">    他是个随机值，一般不这么使用，通常就 int a = 0; 就可以</span><br><span class="line">    */</span><br><span class="line">    cout &lt;&lt; a &lt;&lt; endl;  //随机数</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; a;</span><br><span class="line">    cout &lt;&lt; &quot;a + b = &quot; &lt;&lt; a + b &lt;&lt; endl;  //加法运算</span><br><span class="line">    cout &lt;&lt; &quot;a * b = &quot; &lt;&lt; a * b &lt;&lt; endl;  //乘法运算</span><br><span class="line">    cout &lt;&lt; &quot;a / b = &quot; &lt;&lt; a * 1.0 / b &lt;&lt; endl;  //实除运算</span><br><span class="line">    cout &lt;&lt; &quot;a // b = &quot; &lt;&lt; a / b &lt;&lt; endl;  //整除运算</span><br><span class="line">    cout &lt;&lt; &quot;a % b = &quot; &lt;&lt; a % b &lt;&lt; endl;  //取模运算</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;第一行代码&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;sp</summary>
+      
+    
+    
+    
+    <category term="从零开始学编程" scheme="https://coleduck1122.github.io/categories/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="C++" scheme="https://coleduck1122.github.io/tags/C/"/>
+    
+    <category term="课程" scheme="https://coleduck1122.github.io/tags/%E8%AF%BE%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python入门(1)</title>
+    <link href="https://coleduck1122.github.io/2023/03/02/Python%E5%85%A5%E9%97%A8(1)/"/>
+    <id>https://coleduck1122.github.io/2023/03/02/Python%E5%85%A5%E9%97%A8(1)/</id>
+    <published>2023-03-02T06:50:42.105Z</published>
+    <updated>2023-03-02T11:16:30.934Z</updated>
+    
+    <content type="html"><![CDATA[<p>第一行代码</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">print(&quot;Hello World!&quot;)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;第一行代码&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;print(&amp;quot;Hello World!&amp;quot;)&lt;/span&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="从零开始学编程" scheme="https://coleduck1122.github.io/categories/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="课程" scheme="https://coleduck1122.github.io/tags/%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="Python" scheme="https://coleduck1122.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C语言入门(1)</title>
+    <link href="https://coleduck1122.github.io/2023/03/02/C%E8%AF%AD%E8%A8%80(1)/"/>
+    <id>https://coleduck1122.github.io/2023/03/02/C%E8%AF%AD%E8%A8%80(1)/</id>
+    <published>2023-03-02T06:49:10.964Z</published>
+    <updated>2023-03-02T11:15:29.091Z</updated>
+    
+    <content type="html"><![CDATA[<p>第一行代码</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    printf(&quot;Hello World!\n&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;第一行代码&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#include &amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;spa</summary>
+      
+    
+    
+    
+    <category term="从零开始学编程" scheme="https://coleduck1122.github.io/categories/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="课程" scheme="https://coleduck1122.github.io/tags/%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="C" scheme="https://coleduck1122.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java入门(1)</title>
+    <link href="https://coleduck1122.github.io/2023/03/02/Java%E5%85%A5%E9%97%A8(1)/"/>
+    <id>https://coleduck1122.github.io/2023/03/02/Java%E5%85%A5%E9%97%A8(1)/</id>
+    <published>2023-03-02T06:48:56.988Z</published>
+    <updated>2023-03-02T11:17:50.180Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class HelloWorld &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        System.out.println(&quot;Hello World!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;public class HelloWorld &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class</summary>
+      
+    
+    
+    
+    <category term="从零开始学编程" scheme="https://coleduck1122.github.io/categories/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="课程" scheme="https://coleduck1122.github.io/tags/%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="Java" scheme="https://coleduck1122.github.io/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Test Page</title>
+    <link href="https://coleduck1122.github.io/2023/03/02/TestPage/"/>
+    <id>https://coleduck1122.github.io/2023/03/02/TestPage/</id>
+    <published>2023-03-02T06:39:24.124Z</published>
+    <updated>2023-03-02T11:16:13.996Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hello World!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Hello World!&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
