@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>Python与数据科学-数据类型(第2章)</title>
-      <link href="/2023/03/05/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6(2)/"/>
-      <url>/2023/03/05/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6(2)/</url>
+      <title>Python与数据科学——第3章</title>
+      <link href="/2023/03/06/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6(%E7%AC%AC3%E7%AB%A0)/"/>
+      <url>/2023/03/06/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6(%E7%AC%AC3%E7%AB%A0)/</url>
       
-        <content type="html"><![CDATA[<ol><li><p>(单选题) 利用print()格式化输出,哪个选项用于控制浮点数的小数点后两位输出?<br>A   {.2}<br>B   {:.2}<br>C   {:.2f}<br>D   {.2f}</p></li><li><p>(单选题) 对于字符串 s = ‘jwtent’,下列表达式的输出和其他三个不同的是( )<br>A   s[::-5]<br>B   s[0] + s[-1]<br>C   s[::-1][::-5]<br>D   s[::5]</p></li><li><p>(单选题) 下列运算符使用错误的是( )<br>A   3*’abc’<br>B   [1,2,3]+[4,5,6]<br>C   (-10) % (-3)<br>D   1+’a’</p></li><li><p>(单选题) 关于&lt;模板字符串&gt;.format(&lt;逗号分隔的参数&gt;)中的内容描述,正确的选项是:<br>A   模板字符串里的格式控制信息语法格式是:{&lt;参数序号&gt;:&lt;格式控制标记&gt;},参数序号是从1开始<br>B   格式控制信息{:*^10}表示这个位置是最大长度为10的整数<br>C   格式控制信息{2:0&gt;7f}里面的‘f’表示这个位置是一个整数<br>D   逗号分隔的参数可以是变量,也可以是函数</p></li><li><p>(单选题) 关于 a and b 的描述错误的是 ( )<br>A   若 a=False, b=False 则 a and b 的值为 False<br>B   若 a=False, b=True 则 a and b 的值为 False<br>C   若 a=True, b=False 则 a and b 的值为 True<br>D   若 a=True,b=True 则 a and b 的值为 True</p></li><li><p>(单选题) 关于Python数据类型的描述,正确的选项是:<br>A   运算符+、-、*、/ 等跟赋值符号 = 相连,形成增强赋值操作符<br>B   内置函数divmod(x,y)的运算结果是两个整数:x除y的整数商以及余数<br>C   函数ord(x)是返回字符串x对应的Unicode编码<br>D   函数lower(x)是将字符串x的首字母小写</p></li><li><p>(单选题) 关于Python语言的注释语句的描述,正确的是:<br>A   ‘’’开头的语句也表示注释,用法跟#一样<br>B   #之后的语句被解释器解释,但不执行<br>C   以#开头的语句是注释<br>D   #注释符可以注释多行</p></li><li><p>(单选题) 以下不是Python数据类型的是:<br>A   列表<br>B   整数<br>C   字符串<br>D   实数</p></li><li><p>(单选题) 以下关于程序设计语言的描述,正确的选项是:<br>A   Python语言是一种面向过程,也是面向对象的语言<br>B   Python语言与平台相关<br>C   Python语言的生态库都是官方开发的<br>D   Python语言是网络通用语言</p></li><li><p>(单选题) 执行下述程序的输出结果是:<br>ds = {‘eng’:2,’math’:6,’comp’:9,’PE’:4}<br>print(ds.pop(max(ds.keys()), 0))<br>A   math<br>B   PE<br>C   6<br>D   4</p></li><li><p>(单选题) 下面不属于Python保留字的是:<br>A   import<br>B   type<br>C   elif<br>D   def</p></li><li><p>(单选题) 设a.txt的内容是: a,b,c,d 以下程序执行结果是: with open(‘a.txt’,’r’) as f:<br>print(f.read().split(‘,’))<br>A   a, b, c, d<br>B   [a, b, c, d]<br>C   ‘a’, ‘b’, ‘c’, ‘d’<br>D   [‘a’, ‘b’, ‘c’, ‘d’]</p></li><li><p>(单选题) 以下程序的输出结果,可能的选项是:<br>ds = {‘av’:2,’vr’:4,’ls’:9,’path’:6}<br>print(ds.popitem(), len(ds))<br>A   (‘path’, 6) 3<br>B   (‘av’, 2) 4<br>C   (‘vr’, 2) 3<br>D   (‘path’, 6) 4</p></li><li><p>(单选题) 一般情况下, 整数用十进制表示,如果用其他进制表示一个数,错误的描述选项是:()<br>A   0x1010表示一个十六进制数<br>B   1010b表示一个二进制数<br>C   0o1010表示一个八进制数<br>D   0b1010表示一个二进制数</p></li><li><p>(单选题) 下列关于 Python 变量的说法错误的是 ( )<br>A   变量无须指定类型<br>B   变量不必事先声明但区分大小写<br>C   变量无须先创建和赋值而直接使用<br>D   可以采用使用 del 关键字释放变量</p></li><li><p>(单选题) 以下哪个选项是 print((9<strong>0.5)*(9</strong>0.5)==3)的执行结果( )<br>A   9<br>B   False<br>C   0<br>D   True</p></li><li><p>(单选题) 字符串是一个字符序列,给字符串s,以下表示s从右侧向左第三个字符的是:<br>A   s[:-3]<br>B   s[0:-3]<br>C   s[3]<br>D   s[-3]</p></li><li><p>(单选题) 下面不能创建一个集合的语句是( )<br>A   s3=(1,2,3,4)<br>B   s1=set()<br>C   s2=set(“abcd”)<br>D   s4=frozenset((3,2,1))</p></li><li><p>(单选题) 关于以下程序输出结果的描述,正确的选项是:<br>l = [1,2,3,4,5,6,7]<br>print(l.pop(0), len(l))<br>A   0 7<br>B   0 6<br>C   1 7<br>D   1 6</p></li><li><p>(单选题) 执行下面的操作后,list2 的值为( )<br>list1 = [4,5,6]<br>list2 = list1<br>list1[2] = 3<br>A   [4,5,6]<br>B   [4,5,3]<br>C   [4,3,6]<br>D   其他选项都不正确</p></li><li><p>(单选题) 以下关于Python语言中“缩进”说法正确的是:<br>A   缩进是非强制的,仅为了提高代码可读性<br>B   缩进统一为4个空格<br>C   缩进在程序中长度统一且强制使用<br>D   缩进可以用在任何语句之后,表示语句间的包含关系</p></li><li><p>(单选题) 对于表达式 a = [3, 4, 5, 6, 7, 9, 11],以下输出结果正确的是( )<br>A   print(a[0:-1]) =&gt; [3,4,5,6,7,9]<br>B   print(a[0:0]) =&gt; [3]<br>C   print(a[1:-1]) =&gt; [4,5,6,7,9,11]<br>D   print(a[3:7]) =&gt; [6,7,9,11,0]</p></li><li><p>(单选题) 有表达式 x = [0, -1, 0, None, (), [5,8,10]],则 print(len(x))的结果为( )<br>A   4<br>B   5<br>C   8<br>D   6</p></li><li><p>(单选题) 关于组合数据类型的描述,正确的选项是:<br>A   序列类型的元素可以用reverse()方法交换相邻元素的位置<br>B   列表类型里的元素要求是同一种数据类型<br>C   Python中最常用的映射类型的典型代表是字典类型<br>D   元组采用大括号方式表示</p></li></ol><ol start="25"><li>(单选题) 以下关于Python程序的基本语法元素,错误的描述是:<br>A   变量的命名规则之一是名字的首位不能是数字<br>B   变量是由用户定义的用来保存和表示数据的一种语法元素<br>C   Python语言只能用4个空格的缩进来实现程序的强制可读性<br>D   变量标识符是一个字符串,长度是没有限制的</li></ol>]]></content>
+        <content type="html"><![CDATA[<h2 id="第3章——"><a href="#第3章——" class="headerlink" title="第3章——"></a>第3章——</h2><p>Nothing about it.</p><p><a href="">Python与数据科学——第4章</a></p>]]></content>
       
       
       <categories>
@@ -33,11 +33,107 @@
     
     
     <entry>
-      <title>英语学习之每日10单词系列(3)</title>
+      <title></title>
+      <link href="/2023/03/06/%E6%AF%8F%E5%91%A8%E6%80%BB%E7%BB%93(2)/"/>
+      <url>/2023/03/06/%E6%AF%8F%E5%91%A8%E6%80%BB%E7%BB%93(2)/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>英语学习之每日20单词系列(4)</title>
+      <link href="/2023/03/06/%E6%AF%8F%E6%97%A5%E5%8D%95%E8%AF%8D%E8%8B%B1(4)/"/>
+      <url>/2023/03/06/%E6%AF%8F%E6%97%A5%E5%8D%95%E8%AF%8D%E8%8B%B1(4)/</url>
+      
+        <content type="html"><![CDATA[<table><thead><tr><th align="center">序号</th><th align="center">英文</th><th align="center">释义1</th><th align="center">释义2</th><th align="center">释义3</th></tr></thead><tbody><tr><td align="center">1.</td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td align="center">2.</td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td align="center">3.</td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td align="center">4.</td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td align="center">5.</td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td align="center">6.</td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td align="center">7.</td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td align="center">8.</td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td align="center">9.</td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td align="center">10.</td><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> 英语学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 一起背单词 </tag>
+            
+            <tag> 英语 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>日语学习之每日10单词系列(4)</title>
+      <link href="/2023/03/06/%E6%AF%8F%E6%97%A5%E5%8D%95%E8%AF%8D%E6%97%A5(4)/"/>
+      <url>/2023/03/06/%E6%AF%8F%E6%97%A5%E5%8D%95%E8%AF%8D%E6%97%A5(4)/</url>
+      
+        <content type="html"><![CDATA[<table><thead><tr><th align="center">序号</th><th align="center">汉字</th><th align="center">平假名</th><th align="center">罗马音</th><th align="center">释义</th></tr></thead><tbody><tr><td align="center">1.</td><td align="center">新聞</td><td align="center">しんぶん</td><td align="center">shinbun</td><td align="center">报纸</td></tr><tr><td align="center">2.</td><td align="center">雑誌</td><td align="center">ざっし</td><td align="center">zasshi</td><td align="center">杂志</td></tr><tr><td align="center">3.</td><td align="center">辞書</td><td align="center">じしょ</td><td align="center">jisho</td><td align="center">辞典</td></tr><tr><td align="center">4.</td><td align="center">カメラ</td><td align="center">かめら</td><td align="center">kamera</td><td align="center">照相机</td></tr><tr><td align="center">5.</td><td align="center">テレビ</td><td align="center">てれび</td><td align="center">terebi</td><td align="center">电视机</td></tr><tr><td align="center">6.</td><td align="center">パソコン</td><td align="center">ぱそこん</td><td align="center">pasokon</td><td align="center">个人电脑</td></tr><tr><td align="center">7.</td><td align="center">ラジオ</td><td align="center">らじお</td><td align="center">rajio</td><td align="center">收音机</td></tr><tr><td align="center">8.</td><td align="center">電話</td><td align="center">でんわ</td><td align="center">denwa</td><td align="center">电话</td></tr><tr><td align="center">9.</td><td align="center">机</td><td align="center">つくえ</td><td align="center">tsukue</td><td align="center">桌子</td></tr><tr><td align="center">10.</td><td align="center"></td><td align="center">いす</td><td align="center">isu</td><td align="center">椅子</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日语学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 日语 </tag>
+            
+            <tag> 一起背单词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python与数据科学——第2章数据类型</title>
+      <link href="/2023/03/05/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6(%E7%AC%AC2%E7%AB%A0)/"/>
+      <url>/2023/03/05/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6(%E7%AC%AC2%E7%AB%A0)/</url>
+      
+        <content type="html"><![CDATA[<h2 id="第2章——数据类型"><a href="#第2章——数据类型" class="headerlink" title="第2章——数据类型"></a>第2章——数据类型</h2><hr><ol><li>(单选题) 利用print()格式化输出,哪个选项用于控制浮点数的小数点后两位输出?<br>A&emsp;{.2}<br>B&emsp;{:.2}<br>C&emsp;{:.2f}<br>D&emsp;{.2f}<blockquote><p>答案：C<br>解析：在Python中，可以使用{}占位符和format()方法来实现格式化输出。<br>A与D没有冒号，未指定参数位置，语法错误。而C满足题目要求<br>B的输出有些奇怪，小数位数足够的时候，是保留数字的有效位数，可以试下下面两个语句<br>print(“{:.5}”.format(314.15926))   print(“{:.3}”.format(314.15926))<br>详解：<a href="https://www.runoob.com/python/att-string-format.html">https://www.runoob.com/python/att-string-format.html</a></p></blockquote></li></ol><hr><ol start="2"><li>(单选题) 对于字符串 s = ‘jwtent’,下列表达式的输出和其他三个不同的是( )<br>A&emsp;s[::-5]<br>B&emsp;s[0] + s[-1]<br>C&emsp;s[::-1][::-5]<br>D&emsp;s[::5]<blockquote><p>答案：A<br>解析：在Python中，可以使用s[start:end:step]来实现切片操作，其中，start表示起始位置（默认为0），end表示结束位置（默认为字符串长度），step表示步长（默认为1）。<br>A. s[::-5] 表示从右向左每隔五个字符取一个字符，结果是’tj’<br>B. s[0] + s[-1] 表示取第一个字符和最后一个字符并拼接起来，结果是’jt’<br>C. s[::-1][::-5] 表示先反转字符串’tnetwj’再从右向左每隔五个字符取一个字符，并拼接起来，结果是’jt’<br>D. s[::5] 表示从左向右每隔五个字符取一个字符，并拼接起来，结果是’jt’<br>详解：<a href="https://zhuanlan.zhihu.com/p/79541418">https://zhuanlan.zhihu.com/p/79541418</a></p></blockquote></li></ol><hr><ol start="3"><li>(单选题) 下列运算符使用错误的是( )<br>A&emsp;3*’abc’<br>B&emsp;[1,2,3]+[4,5,6]<br>C&emsp;(-10) % (-3)<br>D&emsp;1+’a’<blockquote><p>答案：D<br>解析：python是强类型语言，无法实现int和string的相加，故D错误<br>其他项的结果分别为 abcabcabc , [1,2,3,4,5,6] , -1</p></blockquote></li></ol><hr><ol start="4"><li>(单选题) 关于&lt;模板字符串&gt;.format(&lt;逗号分隔的参数&gt;)中的内容描述,正确的选项是:<br>A&emsp;模板字符串里的格式控制信息语法格式是:{&lt;参数序号&gt;:&lt;格式控制标记&gt;},参数序号是从1开始<br>B&emsp;格式控制信息{:*^10}表示这个位置是最大长度为10的整数<br>C&emsp;格式控制信息{2:0&gt;7f}里面的‘f’表示这个位置是一个整数<br>D&emsp;逗号分隔的参数可以是变量,也可以是函数<blockquote><p>答案：C<br>解析：A错误，参数序号从0开始。<br>B，{:*^10}表示控制第一个参数以宽度为10的域居中输出其余空位补星号，且长度大于等于10的内容原样输出<br>print(“{:*^10}”.format(314.15)) -&gt; **314.15**<br>print(“{:*^10}”.format(314.15111111)) -&gt; 314.15111111</p></blockquote></li></ol><hr><ol start="5"><li>(单选题) 关于 a and b 的描述错误的是 ( )<br>A&emsp;若 a=False, b=False 则 a and b 的值为 False<br>B&emsp;若 a=False, b=True 则 a and b 的值为 False<br>C&emsp;若 a=True, b=False 则 a and b 的值为 True<br>D&emsp;若 a=True,b=True 则 a and b 的值为 True<blockquote><p>答案：C</p></blockquote></li></ol><hr><ol start="6"><li>(单选题) 关于Python数据类型的描述,正确的选项是:<br>A&emsp;运算符+、-、*、/ 等跟赋值符号 = 相连,形成增强赋值操作符<br>B&emsp;内置函数divmod(x,y)的运算结果是两个整数:x除y的整数商以及余数<br>C&emsp;函数ord(x)是返回字符串x对应的Unicode编码<br>D&emsp;函数lower(x)是将字符串x的首字母小写<blockquote><p>答案：A</p></blockquote></li></ol><hr><ol start="7"><li>(单选题) 关于Python语言的注释语句的描述,正确的是:<br>A&emsp;’’’开头的语句也表示注释,用法跟#一样<br>B&emsp;#之后的语句被解释器解释,但不执行<br>C&emsp;以#开头的语句是注释<br>D&emsp;#注释符可以注释多行<blockquote><p>答案：C</p></blockquote></li></ol><hr><ol start="8"><li>(单选题) 以下不是Python数据类型的是:<br>A&emsp;列表<br>B&emsp;整数<br>C&emsp;字符串<br>D&emsp;实数<blockquote><p>答案：D</p></blockquote></li></ol><hr><ol start="9"><li>(单选题) 以下关于程序设计语言的描述,正确的选项是:<br>A&emsp;Python语言是一种面向过程,也是面向对象的语言<br>B&emsp;Python语言与平台相关<br>C&emsp;Python语言的生态库都是官方开发的<br>D&emsp;Python语言是网络通用语言<blockquote><p>答案：A</p></blockquote></li></ol><hr><ol start="10"><li>(单选题) 执行下述程序的输出结果是:<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ds = &#123;&#x27;eng&#x27;:2,&#x27;math&#x27;:6,&#x27;comp&#x27;:9,&#x27;PE&#x27;:4&#125;</span><br><span class="line">print(ds.pop(max(ds.keys()), 0))</span><br></pre></td></tr></table></figure>A&emsp;math<br>B&emsp;PE<br>C&emsp;6<br>D&emsp;4<blockquote><p>答案：B</p></blockquote></li></ol><hr><ol start="11"><li>(单选题) 下面不属于Python保留字的是:<br>A&emsp;import<br>B&emsp;type<br>C&emsp;elif<br>D&emsp;def<blockquote><p>答案：B</p></blockquote></li></ol><hr><ol start="12"><li>(单选题) 设a.txt的内容是: a,b,c,d 以下程序执行结果是: <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">with open(&#x27;a.txt&#x27;,&#x27;r&#x27;) as f:</span><br><span class="line">print(f.read().split(&#x27;,&#x27;))</span><br></pre></td></tr></table></figure>A&emsp;a, b, c, d<br>B&emsp;[a, b, c, d]<br>C&emsp;’a’, ‘b’, ‘c’, ‘d’<br>D&emsp;[‘a’, ‘b’, ‘c’, ‘d’]<blockquote><p>答案：D</p></blockquote></li></ol><hr><ol start="13"><li>(单选题) 以下程序的输出结果,可能的选项是:<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ds = &#123;&#x27;av&#x27;:2,&#x27;vr&#x27;:4,&#x27;ls&#x27;:9,&#x27;path&#x27;:6&#125;</span><br><span class="line">print(ds.popitem(), len(ds))</span><br></pre></td></tr></table></figure>A&emsp;(‘path’, 6) 3<br>B&emsp;(‘av’, 2) 4<br>C&emsp;(‘vr’, 2) 3<br>D&emsp;(‘path’, 6) 4</li></ol><hr><ol start="14"><li>(单选题) 一般情况下, 整数用十进制表示,如果用其他进制表示一个数,错误的描述选项是:()<br>A&emsp;0x1010表示一个十六进制数<br>B&emsp;1010b表示一个二进制数<br>C&emsp;0o1010表示一个八进制数<br>D&emsp;0b1010表示一个二进制数<blockquote><p>答案：B</p></blockquote></li></ol><hr><ol start="15"><li>(单选题) 下列关于 Python 变量的说法错误的是 ( )<br>A&emsp;变量无须指定类型<br>B&emsp;变量不必事先声明但区分大小写<br>C&emsp;变量无须先创建和赋值而直接使用<br>D&emsp;可以采用使用 del 关键字释放变量<blockquote><p>答案：C</p></blockquote></li></ol><hr><ol start="16"><li>(单选题) 以下哪个选项是 print((9<strong>0.5)*(9</strong>0.5)==3)的执行结果( )<br>A&emsp;9<br>B&emsp;False<br>C&emsp;0<br>D&emsp;True<blockquote><p>答案：D</p></blockquote></li></ol><hr><ol start="17"><li>(单选题) 字符串是一个字符序列,给字符串s,以下表示s从右侧向左第三个字符的是:<br>A&emsp;s[:-3]<br>B&emsp;s[0:-3]<br>C&emsp;s[3]<br>D&emsp;s[-3]<blockquote><p>答案：D</p></blockquote></li></ol><hr><ol start="18"><li>(单选题) 下面不能创建一个集合的语句是( )<br>A&emsp;s3=(1,2,3,4)<br>B&emsp;s1=set()<br>C&emsp;s2=set(“abcd”)<br>D&emsp;s4=frozenset((3,2,1))<blockquote><p>答案：A</p></blockquote></li></ol><hr><ol start="19"><li>(单选题) 关于以下程序输出结果的描述,正确的选项是:<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">l = [1,2,3,4,5,6,7]</span><br><span class="line">print(l.pop(0), len(l))</span><br></pre></td></tr></table></figure>A&emsp;0 7<br>B&emsp;0 6<br>C&emsp;1 7<br>D&emsp;1 6<blockquote><p>答案：D</p></blockquote></li></ol><hr><ol start="20"><li>(单选题) 执行下面的操作后,list2 的值为( )<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">list1 = [4,5,6]</span><br><span class="line">list2 = list1</span><br><span class="line">list1[2] = 3</span><br></pre></td></tr></table></figure>A&emsp;[4,5,6]<br>B&emsp;[4,5,3]<br>C&emsp;[4,3,6]<br>D&emsp;其他选项都不正确<blockquote><p>答案：B</p></blockquote></li></ol><hr><ol start="21"><li>(单选题) 以下关于Python语言中“缩进”说法正确的是:<br>A&emsp;缩进是非强制的,仅为了提高代码可读性`<br>B&emsp;缩进统一为4个空格<br>C&emsp;缩进在程序中长度统一且强制使用<br>D&emsp;缩进可以用在任何语句之后,表示语句间的包含关系<blockquote><p>答案：C</p></blockquote></li></ol><hr><ol start="22"><li>(单选题) 对于表达式 a = [3, 4, 5, 6, 7, 9, 11],以下输出结果正确的是( )<br>A&emsp;print(a[0:-1]) =&gt; [3,4,5,6,7,9]<br>B&emsp;print(a[0:0]) =&gt; [3]<br>C&emsp;print(a[1:-1]) =&gt; [4,5,6,7,9,11]<br>D&emsp;print(a[3:7]) =&gt; [6,7,9,11,0]<blockquote><p>答案：A</p></blockquote></li></ol><hr><ol start="23"><li>(单选题) 有表达式 x = [0, -1, 0, None, (), [5,8,10]],则 print(len(x))的结果为( )<br>A&emsp;4<br>B&emsp;5<br>C&emsp;8<br>D&emsp;6<blockquote><p>答案：D</p></blockquote></li></ol><hr><ol start="24"><li>(单选题) 关于组合数据类型的描述,正确的选项是:<br>A&emsp;序列类型的元素可以用reverse()方法交换相邻元素的位置<br>B&emsp;列表类型里的元素要求是同一种数据类型<br>C&emsp;Python中最常用的映射类型的典型代表是字典类型<br>D&emsp;元组采用大括号方式表示<blockquote><p>答案：C</p></blockquote></li></ol><hr><ol start="25"><li>(单选题) 以下关于Python程序的基本语法元素,错误的描述是:<br>A&emsp;变量的命名规则之一是名字的首位不能是数字<br>B&emsp;变量是由用户定义的用来保存和表示数据的一种语法元素<br>C&emsp;Python语言只能用4个空格的缩进来实现程序的强制可读性<br>D&emsp;变量标识符是一个字符串,长度是没有限制的<blockquote><p>答案：C</p></blockquote></li></ol><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> 专业课 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> 数据科学 </tag>
+            
+            <tag> 作业 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>英语学习之每日20单词系列(3)</title>
       <link href="/2023/03/05/%E6%AF%8F%E6%97%A5%E5%8D%95%E8%AF%8D%E8%8B%B1(3)/"/>
       <url>/2023/03/05/%E6%AF%8F%E6%97%A5%E5%8D%95%E8%AF%8D%E8%8B%B1(3)/</url>
       
-        <content type="html"><![CDATA[<table><thead><tr><th align="center">序号</th><th align="center">英文</th><th align="center">释义1</th><th align="center">释义2</th><th align="center">释义3</th></tr></thead><tbody><tr><td align="center">1.</td><td align="center">reproach</td><td align="center">v.责备</td><td align="center">n.指责</td><td align="center"></td></tr><tr><td align="center">2.</td><td align="center">toxic</td><td align="center">adj.有毒的</td><td align="center">adj.恶毒的</td><td align="center"></td></tr><tr><td align="center">3.</td><td align="center">offset</td><td align="center">v.抵消</td><td align="center">n.补偿</td><td align="center">adj.胶印的</td></tr><tr><td align="center">4.</td><td align="center">conference</td><td align="center">n.会议</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">5.</td><td align="center">propaganda</td><td align="center">n.宣传</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">6.</td><td align="center">extravagant</td><td align="center">adj.奢侈的</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">7.</td><td align="center">voluntary</td><td align="center">adj.志愿的</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">8.</td><td align="center">deduce</td><td align="center">v.推断</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">9.</td><td align="center">provoke</td><td align="center">v.挑衅</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">10.</td><td align="center">passive</td><td align="center">adj.被动的</td><td align="center">adj.消极的</td><td align="center"></td></tr></tbody></table>]]></content>
+        <content type="html"><![CDATA[<table><thead><tr><th align="center">序号</th><th align="center">英文</th><th align="center">释义1</th><th align="center">释义2</th><th align="center">释义3</th></tr></thead></table><p>1.|cocaine|n.可卡因||<br>2.|fraud|n.骗子|n.诈骗|<br>3.|complement|v.补充||<br>4.|outrage|n.愤怒||<br>5.|inevitable|n.不可避免的||<br>6.|innovation|n.创新||<br>7.|junk|n.废旧物品|n.垃圾|<br>8.|cite|vt.引用||<br>9.|indignant|adj.愤慨的||<br>10.|cannon|n.大炮|v.开炮|v.相撞<br>11.||||<br>12.||||<br>13.||||<br>14.||||<br>15.||||<br>16.||||<br>17.||||<br>18.||||<br>19.||||<br>20.||||</p>]]></content>
       
       
       <categories>
@@ -87,11 +183,11 @@
     
     
     <entry>
-      <title>英语学习之每日10单词系列(2)</title>
+      <title>英语学习之每日20单词系列(2)</title>
       <link href="/2023/03/03/%E6%AF%8F%E6%97%A5%E5%8D%95%E8%AF%8D%E8%8B%B1(2)/"/>
       <url>/2023/03/03/%E6%AF%8F%E6%97%A5%E5%8D%95%E8%AF%8D%E8%8B%B1(2)/</url>
       
-        <content type="html"><![CDATA[<table><thead><tr><th align="center">序号</th><th align="center">英文</th><th align="center">释义1</th><th align="center">释义2</th><th align="center">释义3</th></tr></thead><tbody><tr><td align="center">1.</td><td align="center">endure</td><td align="center">v.持续</td><td align="center">v.忍受</td><td align="center"></td></tr><tr><td align="center">2.</td><td align="center">recreation</td><td align="center">n.娱乐活动</td><td align="center">n.重建</td><td align="center"></td></tr><tr><td align="center">3.</td><td align="center">monarch</td><td align="center">n.帝王</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">4.</td><td align="center">sturdy</td><td align="center">adj.坚固的</td><td align="center">n.(羊的)晕倒病</td><td align="center"></td></tr><tr><td align="center">5.</td><td align="center">rotten</td><td align="center">adj.腐烂的</td><td align="center">adv.很大程度上</td><td align="center"></td></tr><tr><td align="center">6.</td><td align="center">butts</td><td align="center">n.屁股</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">7.</td><td align="center">glossary</td><td align="center">n.词汇表</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">8.</td><td align="center">leaf</td><td align="center">n.叶子</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">9.</td><td align="center">procedure</td><td align="center">n.程序</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">10.</td><td align="center">specialty</td><td align="center">n.专长</td><td align="center"></td><td align="center"></td></tr></tbody></table>]]></content>
+        <content type="html"><![CDATA[<table><thead><tr><th align="center">序号</th><th align="center">英文</th><th align="center">释义1</th><th align="center">释义2</th><th align="center">释义3</th></tr></thead></table><p>1.|income|n.收入||<br>2.|glossary|n.词汇表||<br>3.|leaf|n.叶子||<br>4.|procedure|n.程序||<br>5.|specialty|n.专长||<br>6.|reproach|v.责备|n.指责|<br>7.|toxic|adj.有毒的|adj.恶毒的|<br>8.|offset|v.抵消|n.补偿|adj.胶印的<br>9.|strain|n.(生物体)种类|n.负担|<br>10.|conference|n.会议||<br>11.|propaganda|n.宣传||<br>12.|extravagant|adj.奢侈的||<br>13.|voluntary|adj.志愿的||<br>14.|deduce|v.推断||<br>15.|remind|vt.使想起|v.提醒|<br>16.|provoke|v.挑衅||<br>17.|passive|adj.被动的|adj.消极的|<br>18.|thrill|n.刺激||<br>19.|cumulative|adj.累积的||<br>20.|reconciliation|n.和解||</p>]]></content>
       
       
       <categories>
@@ -141,11 +237,11 @@
     
     
     <entry>
-      <title>英语学习之每日10单词系列(1)</title>
+      <title>英语学习之每日20单词系列(1)</title>
       <link href="/2023/03/02/%E6%AF%8F%E6%97%A5%E5%8D%95%E8%AF%8D%E8%8B%B1(1)/"/>
       <url>/2023/03/02/%E6%AF%8F%E6%97%A5%E5%8D%95%E8%AF%8D%E8%8B%B1(1)/</url>
       
-        <content type="html"><![CDATA[<table><thead><tr><th align="center">序号</th><th align="center">英文</th><th align="center">释义1</th><th align="center">释义2</th><th align="center">释义3</th></tr></thead><tbody><tr><td align="center">1.</td><td align="center">response</td><td align="center">n.反应</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">2.</td><td align="center">numerous</td><td align="center">adj.许多的</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">3.</td><td align="center">guarantee</td><td align="center">n.保证</td><td align="center">v.确保</td><td align="center"></td></tr><tr><td align="center">4.</td><td align="center">mental</td><td align="center">adj.心理的/精神的</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">5.</td><td align="center">galaxy</td><td align="center">n.星系</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">6.</td><td align="center">despises</td><td align="center">vt.蔑视</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">7.</td><td align="center">sufficient</td><td align="center">adj.足够的</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">8.</td><td align="center">layman</td><td align="center">n.外行</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">9.</td><td align="center">urge</td><td align="center">n.强烈的愿望</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">10.</td><td align="center">endeavor</td><td align="center">n.尽力</td><td align="center">v.努力</td><td align="center"></td></tr></tbody></table>]]></content>
+        <content type="html"><![CDATA[<table><thead><tr><th align="center">序号</th><th align="center">英文</th><th align="center">释义1</th><th align="center">释义2</th><th align="center">释义3</th></tr></thead><tbody><tr><td align="center">1.</td><td align="center">numerous</td><td align="center">adj.许多的</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">2.</td><td align="center">guarantee</td><td align="center">n.保证</td><td align="center">v.确保</td><td align="center"></td></tr><tr><td align="center">3.</td><td align="center">mental</td><td align="center">adj.心理的/精神的</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">4.</td><td align="center">galaxy</td><td align="center">n.星系</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">5.</td><td align="center">despises</td><td align="center">vt.蔑视</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">6.</td><td align="center">sufficient</td><td align="center">adj.足够的</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">7.</td><td align="center">layman</td><td align="center">n.外行</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">8.</td><td align="center">urge</td><td align="center">n.强烈的愿望</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">9.</td><td align="center">specialist</td><td align="center">n.专家</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">10.</td><td align="center">endeavor</td><td align="center">n.尽力</td><td align="center">v.努力</td><td align="center"></td></tr><tr><td align="center">11.</td><td align="center">endure</td><td align="center">v.持续</td><td align="center">v.忍受</td><td align="center"></td></tr><tr><td align="center">12.</td><td align="center">recreation</td><td align="center">n.娱乐活动</td><td align="center">n.重建</td><td align="center"></td></tr><tr><td align="center">13.</td><td align="center">monarch</td><td align="center">n.帝王</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">14.</td><td align="center">purchase</td><td align="center">vt.购买</td><td align="center">n.购买</td><td align="center">n.购买的东西</td></tr><tr><td align="center">15.</td><td align="center">sturdy</td><td align="center">adj.坚固的</td><td align="center">n.(羊的)晕倒病</td><td align="center"></td></tr><tr><td align="center">16.</td><td align="center">rotten</td><td align="center">adj.腐烂的</td><td align="center">adv.很大程度上</td><td align="center"></td></tr><tr><td align="center">17.</td><td align="center">response</td><td align="center">n.反应</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">18.</td><td align="center">government</td><td align="center">n.政府</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">19.</td><td align="center">suburb</td><td align="center">n.郊区</td><td align="center"></td><td align="center"></td></tr><tr><td align="center">20.</td><td align="center">butts</td><td align="center">n.屁股</td><td align="center"></td><td align="center"></td></tr></tbody></table>]]></content>
       
       
       <categories>
