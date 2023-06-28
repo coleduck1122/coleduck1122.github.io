@@ -1,0 +1,345 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>数字图像处理实验2 | Coleduck's Blog</title><meta name="author" content="Coleduck"><meta name="copyright" content="Coleduck"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="2-A  练习空间域图像处理函数的使用题目解答1. 打开图像 Lenna.jpg，分别使用 OpenCV 的平滑滤波函数：blur()，GaussianBlur()和 medianBlur()对打开的图像进行平滑处理，调整各个函数的参数，通过 imshow()函数观察参数对结果的影响（注：请阅读 PPT 或自行百度上述函数的用法）。2. 打开图像 Lenna.jpg，使用 OpenCV 的 Sob">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数字图像处理实验2">
+<meta property="og:url" content="https://coleduck.cn/2023/05/14/0004-02/index.html">
+<meta property="og:site_name" content="Coleduck&#39;s Blog">
+<meta property="og:description" content="2-A  练习空间域图像处理函数的使用题目解答1. 打开图像 Lenna.jpg，分别使用 OpenCV 的平滑滤波函数：blur()，GaussianBlur()和 medianBlur()对打开的图像进行平滑处理，调整各个函数的参数，通过 imshow()函数观察参数对结果的影响（注：请阅读 PPT 或自行百度上述函数的用法）。2. 打开图像 Lenna.jpg，使用 OpenCV 的 Sob">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg">
+<meta property="article:published_time" content="2023-05-14T06:09:31.955Z">
+<meta property="article:modified_time" content="2023-03-29T09:32:20.926Z">
+<meta property="article:author" content="Coleduck">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="作业">
+<meta property="article:tag" content="专业课">
+<meta property="article:tag" content="实验报告">
+<meta property="article:tag" content="OpenCV">
+<meta property="article:tag" content="Visual Studio Code">
+<meta property="article:tag" content="数字图像处理">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://coleduck.cn/2023/05/14/0004-02/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '数字图像处理实验2',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-03-29 17:32:20'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Coleduck's Blog" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-edit"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/note/"><i class="fa-fw fa fa-file-text"></i><span> 笔记</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-thumb-tack"></i><span> 记录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fa fa-book"></i><span> 日志</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li><li><a class="site-page child" href="/friend/"><i class="fa-fw fa fa-address-book"></i><span> 同学录</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-star"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 图片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li><li><a class="site-page child" href="/idol/"><i class="fa-fw fas fa-heart"></i><span> 我推</span></a></li><li><a class="site-page child" href="/resource/"><i class="fa-fw fa fa-cube"></i><span> 资源网站</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-bookmark"></i><span> 作品集</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/page1/"><i class="fa-fw fa fa-code"></i><span> 悦寝</span></a></li><li><a class="site-page child" href="/page2/"><i class="fa-fw fa fa-code"></i><span> 待定</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-id-card"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background: linear-gradient(39deg, #39C5BB 0%, #39C5BB 100%)"><nav id="nav"><span id="blog-info"><a href="/" title="Coleduck's Blog"><img class="site-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg"/><span class="site-name">Coleduck's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-edit"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/note/"><i class="fa-fw fa fa-file-text"></i><span> 笔记</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-thumb-tack"></i><span> 记录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fa fa-book"></i><span> 日志</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li><li><a class="site-page child" href="/friend/"><i class="fa-fw fa fa-address-book"></i><span> 同学录</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-star"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 图片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li><li><a class="site-page child" href="/idol/"><i class="fa-fw fas fa-heart"></i><span> 我推</span></a></li><li><a class="site-page child" href="/resource/"><i class="fa-fw fa fa-cube"></i><span> 资源网站</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-bookmark"></i><span> 作品集</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/page1/"><i class="fa-fw fa fa-code"></i><span> 悦寝</span></a></li><li><a class="site-page child" href="/page2/"><i class="fa-fw fa fa-code"></i><span> 待定</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-id-card"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">数字图像处理实验2</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-05-14T06:09:31.955Z" title="发表于 2023-05-14 14:09:31">2023-05-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-03-29T09:32:20.926Z" title="更新于 2023-03-29 17:32:20">2023-03-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">数字图像处理</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="数字图像处理实验2"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="2-A-练习空间域图像处理函数的使用"><a href="#2-A-练习空间域图像处理函数的使用" class="headerlink" title="2-A  练习空间域图像处理函数的使用"></a>2-A  练习空间域图像处理函数的使用</h2><div class="tabs" id=""><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#-1">题目</button></li><li class="tab"><button type="button" data-href="#-2">解答</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="-1"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 打开图像 Lenna.jpg，分别使用 OpenCV 的平滑滤波函数：blur()，GaussianBlur()和 medianBlur()对打开</span><br><span class="line">的图像进行平滑处理，调整各个函数的参数，通过 imshow()函数观察参数对结果的影响（注：请阅读 PPT 或自行百</span><br><span class="line">度上述函数的用法）。</span><br><span class="line"></span><br><span class="line">2. 打开图像 Lenna.jpg，使用 OpenCV 的 Sobel 算子分别计算 X 和 Y 方向的梯度，使用 imshow()显示 X 和 </span><br><span class="line">Y 两个方向的梯度图像（注：可参阅 ftp 中 code_demo的 Sobel.py），通过调整参数，观察参数对结果的影响；</span><br><span class="line"></span><br><span class="line">3. 打开图像 Lenna.jpg，使用 OpenCV 的 Laplacian 算子对图像进行边缘计算，通过调整参数，观察参数对结果</span><br><span class="line">的影响（注：请百度 opencv 的 Laplacian()函数用法）。</span><br><span class="line"></span><br><span class="line">4. 形如: ker_emb = np.array(([-4, -2, 0], [-1, 1, 1], [0, 2, 4]), dtype=&quot;float32&quot;)定义一个自定义</span><br><span class="line">的滤波核，使用 OpenCV 的 filter2D()对图像进行滤波处理，观察结果图像。</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-2"><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># encoding:utf-8</span></span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">im_path = <span class="string">&#x27;D:/FilesCenter/Miku/picture/48.png&#x27;</span></span><br><span class="line">im = cv2.imread(im_path)</span><br><span class="line">im_gray = cv2.imread(im_path, cv2.IMREAD_GRAYSCALE)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 第 1 题</span></span><br><span class="line"></span><br><span class="line">dst_1_blur = cv2.blur(im, (<span class="number">7</span>, <span class="number">7</span>))  </span><br><span class="line">dst_1_medianBlur = cv2.medianBlur(im, <span class="number">5</span>)</span><br><span class="line">dst_1_gaussianBlur = cv2.GaussianBlur(im, (<span class="number">5</span>, <span class="number">5</span>), <span class="number">0</span>)</span><br><span class="line">cv2.imshow(<span class="string">u&#x27;original&#x27;</span>, im)                         <span class="comment"># 原图像</span></span><br><span class="line">cv2.imshow(<span class="string">u&#x27;blur&#x27;</span>,  dst_1_blur)                    <span class="comment"># 均值滤波</span></span><br><span class="line">cv2.imshow(<span class="string">u&#x27;medianBlur&#x27;</span>,  dst_1_medianBlur)        <span class="comment"># 中值滤波</span></span><br><span class="line">cv2.imshow(<span class="string">u&#x27;gaussianBlur&#x27;</span>,  dst_1_gaussianBlur)    <span class="comment"># 高斯滤波</span></span><br><span class="line">cv2.waitKey()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 第 2 题</span></span><br><span class="line"></span><br><span class="line">sobelX = cv2.Sobel(im_gray, cv2.CV_64F, <span class="number">1</span>, <span class="number">0</span>, ksize = <span class="number">3</span>)</span><br><span class="line">sobelY = cv2.Sobel(im_gray, cv2.CV_64F, <span class="number">0</span>, <span class="number">1</span>, ksize = <span class="number">3</span>)</span><br><span class="line">absX = cv2.convertScaleAbs(sobelX)</span><br><span class="line">absY = cv2.convertScaleAbs(sobelY)</span><br><span class="line">sobelXY = cv2.addWeighted(absX, <span class="number">0.5</span>, absY, <span class="number">0.5</span>, <span class="number">0</span>)</span><br><span class="line">cv2.imshow(<span class="string">&#x27;sobel X&#x27;</span>, absX)         <span class="comment"># X方向的 Sobel算子滤波</span></span><br><span class="line">cv2.imshow(<span class="string">&#x27;sobel Y&#x27;</span>, absY)         <span class="comment"># Y方向的 Sobel算子滤波</span></span><br><span class="line">cv2.imshow(<span class="string">&#x27;sobel XY&#x27;</span>, sobelXY)     <span class="comment"># XY合成方向的 Sobel算子滤波</span></span><br><span class="line">cv2.waitKey()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 第 3 题</span></span><br><span class="line"></span><br><span class="line">lap_color = cv2.Laplacian(im, cv2.CV_16S, ksize = <span class="number">3</span>)</span><br><span class="line">lap_gray = cv2.Laplacian(im_gray, cv2.CV_16S, ksize = <span class="number">3</span>)</span><br><span class="line">dst_3_color = cv2.convertScaleAbs(lap_color)</span><br><span class="line">dst_3_gray = cv2.convertScaleAbs(lap_gray)</span><br><span class="line">cv2.imshow(<span class="string">&#x27;laplacian_color&#x27;</span>, dst_3_color)      <span class="comment"># 彩色图像的 laplacian算子滤波</span></span><br><span class="line">cv2.imshow(<span class="string">&#x27;laplacian_gray&#x27;</span>, dst_3_gray)        <span class="comment"># 灰度图像的 laplacian算子滤波</span></span><br><span class="line">cv2.waitKey()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 第 4 题</span></span><br><span class="line"></span><br><span class="line">ker_4 = np.array(([-<span class="number">4</span>, -<span class="number">2</span>, <span class="number">0</span>], [-<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>], [<span class="number">0</span>, <span class="number">2</span>, <span class="number">4</span>]), dtype=<span class="string">&quot;float32&quot;</span>)</span><br><span class="line">dst_4 = cv2.filter2D(im, -<span class="number">1</span>, ker_4)</span><br><span class="line">cv2.imshow(<span class="string">&#x27;original&#x27;</span>, im)          <span class="comment"># 原图像</span></span><br><span class="line">cv2.imshow(<span class="string">&#x27;dst_emboss&#x27;</span>,  dst_4)    <span class="comment"># 自定义滤波(类似浮雕效果)</span></span><br><span class="line">cv2.waitKey()</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+
+
+<h2 id="2-B-图像直方图均衡化处理"><a href="#2-B-图像直方图均衡化处理" class="headerlink" title="2-B  图像直方图均衡化处理"></a>2-B  图像直方图均衡化处理</h2><div class="tabs" id=""><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#-1">题目</button></li><li class="tab"><button type="button" data-href="#-2">解答</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="-1"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 打开 Lenna.jpg，取 Blue 分量图像，使用 equalizeHist()对图像作直方图均衡化处理；</span><br><span class="line"></span><br><span class="line">2. 分别以窗体的形式显示均衡化处理之前和之后的直方图（显示请参考以下代码）</span><br><span class="line">   </span><br><span class="line">   &#x27;&#x27;&#x27;</span><br><span class="line">   matplot 的方法：plt.hist(x, bins, range, density, ...)</span><br><span class="line">   x -- 数组，bins -- bin 的数目, range -- bin 的下限和上限, ...</span><br><span class="line">   im.raver() -- 多维数组转一维数组 </span><br><span class="line">   &#x27;&#x27;&#x27;</span><br><span class="line">   plt.hist(im[:,:,0].ravel(), 256, [0, 256])</span><br><span class="line">   plt.show()</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-2"><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">im_path = <span class="string">&#x27;D:/FilesCenter/Miku/picture/48.png&#x27;</span></span><br><span class="line">im = cv2.imread(im_path)</span><br><span class="line"></span><br><span class="line">im_b = im[:,:,<span class="number">0</span>]</span><br><span class="line">dst = cv2.equalizeHist(im_b)</span><br><span class="line">cv2.imshow(<span class="string">&#x27;original_B&#x27;</span>, im_b)      <span class="comment"># 原图像的B通道分量</span></span><br><span class="line">cv2.imshow(<span class="string">&#x27;after solve&#x27;</span>, dst)      <span class="comment"># 全局均衡化后</span></span><br><span class="line"></span><br><span class="line">plt.hist(im_b.ravel(), <span class="number">256</span>, [<span class="number">0</span>, <span class="number">256</span>])</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line">cv2.waitKey()</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+
+<h2 id="2-C-图像直方图均衡化处理"><a href="#2-C-图像直方图均衡化处理" class="headerlink" title="2-C  图像直方图均衡化处理"></a>2-C  图像直方图均衡化处理</h2><div class="tabs" id=""><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#-1">题目</button></li><li class="tab"><button type="button" data-href="#-2">解答</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="-1"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 打开 Lenna.jpg，取绿色分量图像，使用 equalizeHist()对绿色分量图像作直方图均衡化处理；</span><br><span class="line"></span><br><span class="line">2. 以均衡化处理后的绿色分量图像的直方图为目标直方图，对 Lenna 的蓝色分量图像作直方图规定化，分别显示原</span><br><span class="line">   始和规定化处理后的蓝色分量图像，及各自的直方图（可参考可参阅 ftp 中 code_demo 的 303_hist_match.</span><br><span class="line">   py）。</span><br><span class="line"></span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-2"><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">im_path = <span class="string">&#x27;D:/FilesCenter/Miku/picture/48.png&#x27;</span></span><br><span class="line">im = cv2.imread(im_path)</span><br><span class="line"></span><br><span class="line">im_b = im[:,:,<span class="number">0</span>]</span><br><span class="line">im_g = im[:,:,<span class="number">1</span>]</span><br><span class="line">im_g_equalizeHist = cv2.equalizeHist(im_g)</span><br><span class="line">source = im_b</span><br><span class="line">target = im_g_equalizeHist</span><br><span class="line"></span><br><span class="line">s_hist = cv2.calcHist([source], [<span class="number">0</span>], <span class="literal">None</span>, [<span class="number">256</span>], [<span class="number">0</span>, <span class="number">256</span>])</span><br><span class="line">t_hist = cv2.calcHist([target], [<span class="number">0</span>], <span class="literal">None</span>, [<span class="number">256</span>], [<span class="number">0</span>, <span class="number">256</span>])</span><br><span class="line">s_hist = s_hist/source.shape[<span class="number">0</span>]/source.shape[<span class="number">1</span>]</span><br><span class="line">t_hist = t_hist/target.shape[<span class="number">0</span>]/target.shape[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算积聚直方图形成映射函数（目标和源）</span></span><br><span class="line">t_map = t_hist.copy()</span><br><span class="line">accu_h  = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">256</span>):</span><br><span class="line">    accu_h += t_hist[i]</span><br><span class="line">    t_map[i] = accu_h</span><br><span class="line"></span><br><span class="line">s_map = s_hist.copy()</span><br><span class="line">accu_h  = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">256</span>):</span><br><span class="line">    accu_h += s_hist[i]</span><br><span class="line">    s_map[i] = accu_h</span><br><span class="line"></span><br><span class="line"><span class="comment"># 确定映射关系</span></span><br><span class="line">index_map = np.zeros([<span class="number">256</span>, <span class="number">1</span>])</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">256</span>):</span><br><span class="line">    temp_h = np.ones([<span class="number">256</span>, <span class="number">1</span>])*s_map[i]</span><br><span class="line">    temp_h = np.fabs(temp_h - t_map)     <span class="comment"># 需取绝对值</span></span><br><span class="line">    index = np.argmin(temp_h)    <span class="comment"># 求 temp_h 中最小值所在位置的索引</span></span><br><span class="line">    index_map[i] = index </span><br><span class="line"></span><br><span class="line">out_im = index_map[source]</span><br><span class="line">out_im = out_im.astype(np.uint8)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示比较</span></span><br><span class="line">plt.subplot(<span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;source&#x27;</span>)</span><br><span class="line">plt.imshow(im_b, cmap=<span class="string">&#x27;gray&#x27;</span>)</span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;after matching&#x27;</span>)</span><br><span class="line">plt.imshow(out_im, cmap=<span class="string">&#x27;gray&#x27;</span>)</span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">2</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;hist of source&#x27;</span>)</span><br><span class="line">plt.hist(im_b.ravel(), <span class="number">256</span>, [<span class="number">0</span>, <span class="number">256</span>])</span><br><span class="line"></span><br><span class="line">plt.subplot(<span class="number">2</span>, <span class="number">2</span>, <span class="number">4</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;hist of matching&#x27;</span>)</span><br><span class="line">plt.hist(out_im.ravel(), <span class="number">256</span>, [<span class="number">0</span>, <span class="number">256</span>])</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+
+<h2 id="2-D-图像直方图均衡化算法"><a href="#2-D-图像直方图均衡化算法" class="headerlink" title="2-D  图像直方图均衡化算法"></a>2-D  图像直方图均衡化算法</h2><div class="tabs" id=""><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#-1">题目</button></li><li class="tab"><button type="button" data-href="#-2">解答</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="-1"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">如下为一个 100x100，灰度级为 0--15 的灰度图像的直方图，请编写程序实现直方图均衡化算法，且以画表方式给出均衡化处理前后的灰度映射关系（注二行表格，第一行为输入灰度级，第二行为均衡化以后对应的灰度级）。</span><br><span class="line"></span><br><span class="line">灰度|0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15</span><br><span class="line">:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:</span><br><span class="line">n 2 57 704 1979 2452 1501 1128 1196 505 316 105 40 12 2 1 0</span><br><span class="line"></span><br><span class="line">注：可将上述直方图定义成一个 16x1 的 numpy 数组，按 PPT 的算法步骤实现均衡化处理（即：归一化、求积聚直</span><br><span class="line">方图、乘最大灰度形成映射）。</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-2"><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">hist = np.asarray([<span class="number">2</span>,<span class="number">57</span>,<span class="number">704</span>,<span class="number">1979</span>,<span class="number">2452</span>,<span class="number">1501</span>,<span class="number">1128</span>,<span class="number">1196</span>,<span class="number">505</span>,<span class="number">316</span>,<span class="number">105</span>,<span class="number">40</span>,<span class="number">15</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">0</span>])</span><br><span class="line">hist_temp = np.asarray([<span class="number">2</span>,<span class="number">57</span>,<span class="number">704</span>,<span class="number">1979</span>,<span class="number">2452</span>,<span class="number">1501</span>,<span class="number">1128</span>,<span class="number">1196</span>,<span class="number">505</span>,<span class="number">316</span>,<span class="number">105</span>,<span class="number">40</span>,<span class="number">15</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line">tot = np.<span class="built_in">sum</span>(hist)</span><br><span class="line">hist = np.divide(hist, tot)  <span class="comment"># 归一化后的直方图</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">16</span>):</span><br><span class="line">    hist[i] += hist[i - <span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">hist_map = np.asarray([<span class="number">0.0</span> <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">16</span>)])  <span class="comment"># 定义映射后的直方图</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">16</span>):</span><br><span class="line">    index = <span class="built_in">round</span>(hist[i] * <span class="number">15</span>)</span><br><span class="line">    hist_map[index] += hist[i]</span><br><span class="line"></span><br><span class="line">hist_res = [<span class="built_in">int</span>(hist_map[i] * tot) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">16</span>)]</span><br><span class="line"></span><br><span class="line">res = [hist_temp, hist_res]  <span class="comment"># 分别是原始的数据 n ，和均衡化处理后的数目 n</span></span><br><span class="line">col = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">16</span>))</span><br><span class="line">row = [<span class="string">&#x27;n1&#x27;</span>, <span class="string">&#x27;n2&#x27;</span>]</span><br><span class="line">fig, ax =plt.subplots(<span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">ax.axis(<span class="string">&#x27;tight&#x27;</span>)</span><br><span class="line">ax.axis(<span class="string">&#x27;off&#x27;</span>)</span><br><span class="line">ax.table(cellText = res, colLabels = col, rowLabels = row, loc = <span class="string">&quot;center&quot;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+
+<hr>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://coleduck.cn">Coleduck</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://coleduck.cn/2023/05/14/0004-02/">https://coleduck.cn/2023/05/14/0004-02/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://coleduck.cn" target="_blank">Coleduck's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Python/">Python</a><a class="post-meta__tags" href="/tags/%E4%BD%9C%E4%B8%9A/">作业</a><a class="post-meta__tags" href="/tags/%E4%B8%93%E4%B8%9A%E8%AF%BE/">专业课</a><a class="post-meta__tags" href="/tags/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/">实验报告</a><a class="post-meta__tags" href="/tags/OpenCV/">OpenCV</a><a class="post-meta__tags" href="/tags/Visual-Studio-Code/">Visual Studio Code</a><a class="post-meta__tags" href="/tags/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">数字图像处理</a></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/05/14/0004-03/" title="数字图像处理实验3"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">数字图像处理实验3</div></div></a></div><div class="next-post pull-right"><a href="/2023/05/14/0004-01/" title="数字图像处理实验1"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">数字图像处理实验1</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/05/14/0004-01/" title="数字图像处理实验1"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-14</div><div class="title">数字图像处理实验1</div></div></a></div><div><a href="/2023/05/14/0004-03/" title="数字图像处理实验3"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-14</div><div class="title">数字图像处理实验3</div></div></a></div><div><a href="/2023/05/14/0004-04/" title="数字图像处理实验4"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-14</div><div class="title">数字图像处理实验4</div></div></a></div><div><a href="/2023/05/14/0003-03/" title="Python入门练习"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-14</div><div class="title">Python入门练习</div></div></a></div><div><a href="/2023/05/14/0003-04/" title="Python基础语法实践"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-14</div><div class="title">Python基础语法实践</div></div></a></div><div><a href="/2023/05/14/0003-05/" title="Python文件操作与数据读取"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-14</div><div class="title">Python文件操作与数据读取</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Coleduck</div><div class="author-info__description">我永远喜欢初音未来</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/12848975/"><i></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/coleduck1122" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:coleduck1122@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">学业繁忙 + 本人很懒，所以目前只记录了作业不常更新有趣的内容hhh</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-A-%E7%BB%83%E4%B9%A0%E7%A9%BA%E9%97%B4%E5%9F%9F%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">2-A  练习空间域图像处理函数的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-B-%E5%9B%BE%E5%83%8F%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E5%8C%96%E5%A4%84%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">2-B  图像直方图均衡化处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-C-%E5%9B%BE%E5%83%8F%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E5%8C%96%E5%A4%84%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">2-C  图像直方图均衡化处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-D-%E5%9B%BE%E5%83%8F%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E5%8C%96%E7%AE%97%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">2-D  图像直方图均衡化算法</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/18/0001-10/" title="杭州义益计组软件仿真 - 指令设计综合实验">杭州义益计组软件仿真 - 指令设计综合实验</a><time datetime="2023-06-18T03:38:39.568Z" title="发表于 2023-06-18 11:38:39">2023-06-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/18/0001-09/" title="杭州义益计组软件仿真 - 带移位模型机实验">杭州义益计组软件仿真 - 带移位模型机实验</a><time datetime="2023-06-18T03:38:33.138Z" title="发表于 2023-06-18 11:38:33">2023-06-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/18/0002-09/" title="Qt实验 - 二维绘图">Qt实验 - 二维绘图</a><time datetime="2023-06-18T03:20:03.408Z" title="发表于 2023-06-18 11:20:03">2023-06-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/05/14/0001-08/" title="杭州义益计组软件仿真 - 简单模型机循环加(减)法实验">杭州义益计组软件仿真 - 简单模型机循环加(减)法实验</a><time datetime="2023-05-14T06:09:32.006Z" title="发表于 2023-05-14 14:09:32">2023-05-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/05/14/0001-07/" title="杭州义益计组软件仿真 - 存储器读写实验">杭州义益计组软件仿真 - 存储器读写实验</a><time datetime="2023-05-14T06:09:32.005Z" title="发表于 2023-05-14 14:09:32">2023-05-14</time></div></div></div></div></div></div></main><footer id="footer" style="background: linear-gradient(39deg, #39C5BB 0%, #39C5BB 100%)"><div id="footer-wrap"><div class="copyright">&copy;2023 By Coleduck</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">浙ICP备2023006941号-1</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>function loadWaline () {
+  function initWaline () {
+    const waline = Waline.init(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://vercel.coleduck.cn/',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: false,
+    }, null))
+  }
+
+  const walineCSSLoad = document.getElementById('waline-css')
+
+  if (typeof Waline === 'object') {
+    walineCSSLoad ? initWaline() : getCSS('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.css','waline-css').then(initWaline)
+  }
+  else {
+    getCSS('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.css','waline-css').then(() => {
+      getScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.js').then(initWaline)
+    })
+  }
+}
+
+if ('Waline' === 'Waline' || !true) {
+  if (true) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+  else setTimeout(loadWaline, 0)
+} else {
+  function loadOtherComment () {
+    loadWaline()
+  }
+}</script></div><div class="aplayer no-destroy" data-id="8201461411" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script>(function(d, w, c) {
+    w.ChatraID = 'RHc7h8borGPjsRDwG';
+    var s = d.createElement('script');
+    w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments);
+    };
+    s.async = true;
+    s.src = 'https://call.chatra.io/chatra.js';
+    if (d.head) d.head.appendChild(s);
+})(document, window, 'Chatra');
+
+if (true) {
+  var chatBtnFn = () => {
+    var chatBtn = document.getElementById("chat_btn")
+    chatBtn.addEventListener("click", function(){
+      Chatra('openChat')
+    });
+  }
+  chatBtnFn()
+} else {
+  if (true) {
+    function chatBtnHide () {
+      Chatra('hide')
+    }
+    function chatBtnShow () {
+      Chatra('show')
+    }
+  }
+}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/no-pjax/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></body></html>

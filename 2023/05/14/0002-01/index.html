@@ -1,0 +1,342 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>VS C++桌面应用程序 - 图形文字显示 | Coleduck's Blog</title><meta name="author" content="Coleduck"><meta name="copyright" content="Coleduck"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="C++桌面应用程序实验1题目  第一题第二题第三题第四题第五题(一) 编写一个简单的画图程序，要求如下： (1) 在例题2.1程序（可以用vc自动生成程序）的基础上，增加画图功能； (2) 在窗口函数中处理鼠标左键单击消息。在该消息处理中，绘制一条直线段，要求线段为实线，    宽度为 2 个像素，颜色为淡蓝色(132, 129, 255)。线段端点为(0, 0)和(100, 100)。   （注">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VS C++桌面应用程序 - 图形文字显示">
+<meta property="og:url" content="https://coleduck.cn/2023/05/14/0002-01/index.html">
+<meta property="og:site_name" content="Coleduck&#39;s Blog">
+<meta property="og:description" content="C++桌面应用程序实验1题目  第一题第二题第三题第四题第五题(一) 编写一个简单的画图程序，要求如下： (1) 在例题2.1程序（可以用vc自动生成程序）的基础上，增加画图功能； (2) 在窗口函数中处理鼠标左键单击消息。在该消息处理中，绘制一条直线段，要求线段为实线，    宽度为 2 个像素，颜色为淡蓝色(132, 129, 255)。线段端点为(0, 0)和(100, 100)。   （注">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg">
+<meta property="article:published_time" content="2023-05-14T06:09:31.978Z">
+<meta property="article:modified_time" content="2023-06-18T10:04:14.383Z">
+<meta property="article:author" content="Coleduck">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="作业">
+<meta property="article:tag" content="专业课">
+<meta property="article:tag" content="实验报告">
+<meta property="article:tag" content="桌面应用程序">
+<meta property="article:tag" content="Visual Studio">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://coleduck.cn/2023/05/14/0002-01/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'VS C++桌面应用程序 - 图形文字显示',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-06-18 18:04:14'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Coleduck's Blog" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-edit"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/note/"><i class="fa-fw fa fa-file-text"></i><span> 笔记</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-thumb-tack"></i><span> 记录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fa fa-book"></i><span> 日志</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li><li><a class="site-page child" href="/friend/"><i class="fa-fw fa fa-address-book"></i><span> 同学录</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-star"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 图片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li><li><a class="site-page child" href="/idol/"><i class="fa-fw fas fa-heart"></i><span> 我推</span></a></li><li><a class="site-page child" href="/resource/"><i class="fa-fw fa fa-cube"></i><span> 资源网站</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-bookmark"></i><span> 作品集</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/page1/"><i class="fa-fw fa fa-code"></i><span> 悦寝</span></a></li><li><a class="site-page child" href="/page2/"><i class="fa-fw fa fa-code"></i><span> 待定</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-id-card"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background: linear-gradient(39deg, #39C5BB 0%, #39C5BB 100%)"><nav id="nav"><span id="blog-info"><a href="/" title="Coleduck's Blog"><img class="site-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg"/><span class="site-name">Coleduck's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-edit"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/note/"><i class="fa-fw fa fa-file-text"></i><span> 笔记</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-thumb-tack"></i><span> 记录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fa fa-book"></i><span> 日志</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li><li><a class="site-page child" href="/friend/"><i class="fa-fw fa fa-address-book"></i><span> 同学录</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-star"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 图片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li><li><a class="site-page child" href="/idol/"><i class="fa-fw fas fa-heart"></i><span> 我推</span></a></li><li><a class="site-page child" href="/resource/"><i class="fa-fw fa fa-cube"></i><span> 资源网站</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-bookmark"></i><span> 作品集</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/page1/"><i class="fa-fw fa fa-code"></i><span> 悦寝</span></a></li><li><a class="site-page child" href="/page2/"><i class="fa-fw fa fa-code"></i><span> 待定</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-id-card"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">VS C++桌面应用程序 - 图形文字显示</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-05-14T06:09:31.978Z" title="发表于 2023-05-14 14:09:31">2023-05-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-18T10:04:14.383Z" title="更新于 2023-06-18 18:04:14">2023-06-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/C-%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/">C++桌面应用程序</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="VS C++桌面应用程序 - 图形文字显示"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="C-桌面应用程序实验1"><a href="#C-桌面应用程序实验1" class="headerlink" title="C++桌面应用程序实验1"></a>C++桌面应用程序实验1</h1><mark class="hl-label green">题目</mark> 
+<div class="tabs" id=""><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#-1">第一题</button></li><li class="tab"><button type="button" data-href="#-2">第二题</button></li><li class="tab"><button type="button" data-href="#-3">第三题</button></li><li class="tab"><button type="button" data-href="#-4">第四题</button></li><li class="tab"><button type="button" data-href="#-5">第五题</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="-1"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(一) 编写一个简单的画图程序，要求如下： </span><br><span class="line"></span><br><span class="line">(1) 在例题2.1程序（可以用vc自动生成程序）的基础上，增加画图功能； </span><br><span class="line"></span><br><span class="line">(2) 在窗口函数中处理鼠标左键单击消息。在该消息处理中，绘制一条直线段，要求线段为实线，</span><br><span class="line">    宽度为 2 个像素，颜色为淡蓝色(132, 129, 255)。线段端点为(0, 0)和(100, 100)。</span><br><span class="line">   （注意，首先需要获取到设备环境，然后再进行绘制） </span><br><span class="line"></span><br><span class="line">(3) 认真调试，让程序顺利运行，并且结果正确。 </span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-2"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(二) 程序二：刷新处理。要求如下： </span><br><span class="line"></span><br><span class="line">(1) 在程序(一)的基础上，完善该程序； </span><br><span class="line"></span><br><span class="line">(2) 大家调整一下窗口大小，是不是发现直线段没了。这是因为，窗口需要刷新。当需要刷新时，</span><br><span class="line">    操作系统会向窗口发送 WM_PAINT 消息，我们需要在 WM_PAINT 消息中，对刷新请求进行处理。</span><br><span class="line"></span><br><span class="line">(3) 怎么处理呢？我们可采用最直接的方法：在 WM_PAINT 消息中，再把直线段绘制一遍（注意，</span><br><span class="line">    在绘制前，也需要先获取到设备环境）。这样，当窗口需要刷新时，该直线段就会重新绘制一遍。</span><br><span class="line"></span><br><span class="line">(4) 认真调试，让程序顺利运行，并且结果正确。（再调整一下窗口，结果正确吗？） </span><br><span class="line"></span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-3"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(三) 程序三：刷新进阶。要求如下： </span><br><span class="line"></span><br><span class="line">(1) 在上述程序的基础上，改进该程序； </span><br><span class="line"></span><br><span class="line">(2) 定义一个 BOOL 型全局变量 bStatus，初如化其值为 TRUE； </span><br><span class="line"></span><br><span class="line">(3) 在 WM_PAINT 消息处理中，当 bStatus 为 TRUE 时，绘制一个矩形，其左上角在(10, 10)处，</span><br><span class="line">    右下角在(150, 100)处。要求矩形框为虚线，线宽为 1，矩形边框颜色为黑色，</span><br><span class="line">    内部填充色为(100, 167, 201)。当 bStatus 为 FALSE 时，绘制一条直线段，要求线段为实线，</span><br><span class="line">    宽度为 2 个像素，颜色为淡蓝色(132, 129, 255)。线段端点为(0, 0)和(100, 100)。 </span><br><span class="line"></span><br><span class="line">(4) 在 WM_LBUTTONDWON 消息处理中，反转 bStatus 的值，即 bStatus = !bStatus</span><br><span class="line">   （真变假，假变真）。写完后，运行程序。大家有没发现，窗口中的绘制内容并不会随 bStatus 的值</span><br><span class="line">    而更新，我们必需调整窗口大小，窗口中的内容才会更新。即只有请求刷新时，窗口才会刷新重绘。 </span><br><span class="line"></span><br><span class="line">(5) 那有没有无需调整窗口大小请求刷新的方法呢？有的，可通过函数InvalidateRect()，</span><br><span class="line">    大家在 WM_LBUTTONDOWN 消息处理中调用该函数。发现没，现在无需调整窗口大小，</span><br><span class="line">    窗口内容就自动刷新了。函数原型如下： </span><br><span class="line">    BOOL InvalidateRect( </span><br><span class="line">    HWND hWnd，           // 窗口句柄 </span><br><span class="line">    CONST RECT* lpRect,   // 矩形区域 </span><br><span class="line">    BOOL bErase            //是否擦除背景 </span><br><span class="line">    ); </span><br><span class="line">    该函数会放一个 WM_PAINT 消息到消息队列中，因此相当于让窗口变脏重绘。可以这样调用该函数：</span><br><span class="line">    InvalidateRect(hWnd, NULL, TRUE)；关于该函数的具体说明，大家可以去百度。</span><br><span class="line"></span><br><span class="line">(6) 认真调试，让程序顺利运行，并且结果正确。 </span><br><span class="line"></span><br><span class="line">(7) 总结：绘制代码可以放在 WM_PAINT 消息处理中，用于处理刷新。</span><br><span class="line">    而当代码中需要重绘时，可以通过 InvalidateRect()发送一个 WM_PAINT 消息。 </span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-4"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(四) 做一个窗口，窗口用户区每隔1s颜色变化一次（红-&gt;白-&gt;黑-&gt;蓝）</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-5"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(五) 在窗口用户区滚动显示文字“浙江工商大学欢迎你”（效果如“动态文字”程序运行结果）</span><br><span class="line">     要求文字背景为红色，文字为白色。</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+
+
+<mark class="hl-label green">代码</mark> 
+<div class="tabs" id=""><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#-1">第一题</button></li><li class="tab"><button type="button" data-href="#-2">第二题</button></li><li class="tab"><button type="button" data-href="#-3">第三题</button></li><li class="tab"><button type="button" data-href="#-4">第四题</button></li><li class="tab"><button type="button" data-href="#-5">第五题</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="-1"><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"> <span class="function">LRESULT CALLBACK <span class="title">WndProc</span><span class="params">(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">switch</span> (message)</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="keyword">case</span> WM_COMMAND:</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> wmId = <span class="built_in">LOWORD</span>(wParam);</span><br><span class="line">        <span class="comment">// 分析菜单选择:</span></span><br><span class="line">        <span class="keyword">switch</span> (wmId)</span><br><span class="line">        &#123;</span><br><span class="line">        <span class="keyword">case</span> IDM_ABOUT:</span><br><span class="line">            <span class="built_in">DialogBox</span>(hInst, <span class="built_in">MAKEINTRESOURCE</span>(IDD_ABOUTBOX), hWnd, About);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> IDM_EXIT:</span><br><span class="line">            <span class="built_in">DestroyWindow</span>(hWnd);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">DefWindowProc</span>(hWnd, message, wParam, lParam);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> WM_PAINT:</span><br><span class="line">    &#123;</span><br><span class="line">        PAINTSTRUCT ps;</span><br><span class="line">        HDC hdc = <span class="built_in">BeginPaint</span>(hWnd, &amp;ps);</span><br><span class="line">        <span class="comment">// <span class="doctag">TODO:</span> 在此处添加使用 hdc 的任何绘图代码...</span></span><br><span class="line">        <span class="built_in">EndPaint</span>(hWnd, &amp;ps);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> WM_LBUTTONDOWN:</span><br><span class="line">    &#123;</span><br><span class="line">        HDC hdc = <span class="built_in">GetDC</span>(hWnd);</span><br><span class="line">        HPEN hPen = <span class="built_in">CreatePen</span>(PS_SOLID, <span class="number">2</span>, <span class="built_in">RGB</span>(<span class="number">132</span>, <span class="number">129</span>, <span class="number">255</span>));</span><br><span class="line">        HGDIOBJ hPenOld = <span class="built_in">SelectObject</span>(hdc, hPen);</span><br><span class="line"></span><br><span class="line">        <span class="built_in">MoveToEx</span>(hdc, <span class="number">0</span>, <span class="number">0</span>, <span class="literal">NULL</span>);</span><br><span class="line">        <span class="built_in">LineTo</span>(hdc, <span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line"></span><br><span class="line">        <span class="built_in">SelectObject</span>(hdc, hPenOld);</span><br><span class="line">        <span class="built_in">DeleteObject</span>(hPen);</span><br><span class="line">        <span class="built_in">ReleaseDC</span>(hWnd, hdc);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> WM_DESTROY:</span><br><span class="line">        <span class="built_in">PostQuitMessage</span>(<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">DefWindowProc</span>(hWnd, message, wParam, lParam);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-2"><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">BOOL flag = FALSE;</span><br><span class="line"></span><br><span class="line"><span class="function">LRESULT CALLBACK <span class="title">WndProc</span><span class="params">(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">switch</span> (message)</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="keyword">case</span> WM_COMMAND:</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> wmId = <span class="built_in">LOWORD</span>(wParam);</span><br><span class="line">            <span class="comment">// 分析菜单选择:</span></span><br><span class="line">            <span class="keyword">switch</span> (wmId)</span><br><span class="line">            &#123;</span><br><span class="line">            <span class="keyword">case</span> IDM_ABOUT:</span><br><span class="line">                <span class="built_in">DialogBox</span>(hInst, <span class="built_in">MAKEINTRESOURCE</span>(IDD_ABOUTBOX), hWnd, About);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> IDM_EXIT:</span><br><span class="line">                <span class="built_in">DestroyWindow</span>(hWnd);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="built_in">DefWindowProc</span>(hWnd, message, wParam, lParam);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> WM_PAINT:</span><br><span class="line">        &#123;</span><br><span class="line">            PAINTSTRUCT ps;</span><br><span class="line">            HDC hdc = <span class="built_in">BeginPaint</span>(hWnd, &amp;ps);</span><br><span class="line">            <span class="comment">// <span class="doctag">TODO:</span> 在此处添加使用 hdc 的任何绘图代码...</span></span><br><span class="line"></span><br><span class="line">            HPEN hP = <span class="built_in">CreatePen</span>(PS_SOLID, <span class="number">1</span>, <span class="built_in">RGB</span>(<span class="number">132</span>, <span class="number">129</span>, <span class="number">255</span>));</span><br><span class="line">            HGDIOBJ hPenOld = <span class="built_in">SelectObject</span>(hdc, hP);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (flag) &#123;</span><br><span class="line">                <span class="built_in">MoveToEx</span>(hdc, <span class="number">0</span>, <span class="number">0</span>, <span class="literal">NULL</span>);</span><br><span class="line">                <span class="built_in">LineTo</span>(hdc, <span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="built_in">SelectObject</span>(hdc, hPenOld);</span><br><span class="line">            <span class="built_in">DeleteObject</span>(hP);</span><br><span class="line">            <span class="built_in">EndPaint</span>(hWnd, &amp;ps);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> WM_LBUTTONDOWN:</span><br><span class="line">        &#123;</span><br><span class="line">            flag = TRUE;</span><br><span class="line">            <span class="built_in">InvalidateRect</span>(hWnd, <span class="literal">NULL</span>, TRUE);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> WM_DESTROY:</span><br><span class="line">        <span class="built_in">PostQuitMessage</span>(<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">DefWindowProc</span>(hWnd, message, wParam, lParam);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-3"><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">BOOL bStatus = TRUE;</span><br><span class="line"></span><br><span class="line"><span class="function">LRESULT CALLBACK <span class="title">WndProc</span><span class="params">(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">switch</span> (message)</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="keyword">case</span> WM_COMMAND:</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> wmId = <span class="built_in">LOWORD</span>(wParam);</span><br><span class="line">        <span class="comment">// 分析菜单选择:</span></span><br><span class="line">        <span class="keyword">switch</span> (wmId)</span><br><span class="line">        &#123;</span><br><span class="line">        <span class="keyword">case</span> IDM_ABOUT:</span><br><span class="line">            <span class="built_in">DialogBox</span>(hInst, <span class="built_in">MAKEINTRESOURCE</span>(IDD_ABOUTBOX), hWnd, About);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> IDM_EXIT:</span><br><span class="line">            <span class="built_in">DestroyWindow</span>(hWnd);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">DefWindowProc</span>(hWnd, message, wParam, lParam);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> WM_PAINT:</span><br><span class="line">    &#123;</span><br><span class="line">        PAINTSTRUCT ps;</span><br><span class="line">        HDC hdc = <span class="built_in">BeginPaint</span>(hWnd, &amp;ps);</span><br><span class="line">        <span class="comment">// <span class="doctag">TODO:</span> 在此处添加使用 hdc 的任何绘图代码...</span></span><br><span class="line"></span><br><span class="line">        HPEN hP1 = <span class="built_in">CreatePen</span>(PS_SOLID, <span class="number">1</span>, <span class="built_in">RGB</span>(<span class="number">132</span>, <span class="number">129</span>, <span class="number">255</span>));</span><br><span class="line">        HPEN hP2 = <span class="built_in">CreatePen</span>(PS_DASH, <span class="number">0</span>, <span class="built_in">RGB</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>));</span><br><span class="line">        HGDIOBJ hPenOld = <span class="built_in">SelectObject</span>(hdc, hP1);</span><br><span class="line"></span><br><span class="line">        HBRUSH hBr1 = <span class="built_in">CreateSolidBrush</span>(<span class="built_in">RGB</span>(<span class="number">100</span>, <span class="number">167</span>, <span class="number">201</span>));</span><br><span class="line">        HGDIOBJ hBrOld = <span class="built_in">SelectObject</span>(hdc, hBr1);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (bStatus) &#123;</span><br><span class="line">            hPenOld = <span class="built_in">SelectObject</span>(hdc, hP2);</span><br><span class="line">            hBrOld = <span class="built_in">SelectObject</span>(hdc, hBr1);</span><br><span class="line">            <span class="built_in">Rectangle</span>(hdc, <span class="number">10</span>, <span class="number">10</span>, <span class="number">150</span>, <span class="number">100</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            hPenOld = <span class="built_in">SelectObject</span>(hdc, hP1);</span><br><span class="line">            <span class="built_in">MoveToEx</span>(hdc, <span class="number">0</span>, <span class="number">0</span>, <span class="literal">NULL</span>);</span><br><span class="line">            <span class="built_in">LineTo</span>(hdc, <span class="number">100</span>, <span class="number">100</span>);            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">SelectObject</span>(hdc, hPenOld);</span><br><span class="line">        <span class="built_in">DeleteObject</span>(hP1);</span><br><span class="line">        <span class="built_in">DeleteObject</span>(hP2);</span><br><span class="line">        <span class="built_in">SelectObject</span>(hdc, hBrOld);</span><br><span class="line">        <span class="built_in">DeleteObject</span>(hBr1);</span><br><span class="line"></span><br><span class="line">        <span class="built_in">EndPaint</span>(hWnd, &amp;ps);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> WM_LBUTTONDOWN:</span><br><span class="line">    &#123;</span><br><span class="line">        HDC hdc = <span class="built_in">GetDC</span>(hWnd);</span><br><span class="line">        bStatus = !bStatus;</span><br><span class="line">        <span class="built_in">InvalidateRect</span>(hWnd, <span class="literal">NULL</span>, TRUE);</span><br><span class="line">        <span class="built_in">ReleaseDC</span>(hWnd, hdc);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> WM_DESTROY:</span><br><span class="line">        <span class="built_in">PostQuitMessage</span>(<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">DefWindowProc</span>(hWnd, message, wParam, lParam);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-4"><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> TIMER_ID = <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> Index = <span class="number">0</span>;</span><br><span class="line">COLORREF colors[] = &#123; <span class="built_in">RGB</span>(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="built_in">RGB</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>), <span class="built_in">RGB</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="built_in">RGB</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>) &#125;;</span><br><span class="line"></span><br><span class="line"><span class="function">LRESULT CALLBACK <span class="title">WndProc</span><span class="params">(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">switch</span> (message)</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="keyword">case</span> WM_CREATE:</span><br><span class="line">        <span class="built_in">SetTimer</span>(hWnd, TIMER_ID, <span class="number">1000</span>, <span class="literal">NULL</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> WM_TIMER:</span><br><span class="line">        Index = (Index + <span class="number">1</span>) % <span class="number">4</span>;</span><br><span class="line">        <span class="built_in">SetClassLongPtr</span>(hWnd, GCLP_HBRBACKGROUND, </span><br><span class="line">                        (LONG)<span class="built_in">CreateSolidBrush</span>(colors[Index]));</span><br><span class="line">        <span class="built_in">InvalidateRect</span>(hWnd, <span class="literal">NULL</span>, TRUE);</span><br><span class="line">    <span class="keyword">case</span> WM_COMMAND:</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> wmId = <span class="built_in">LOWORD</span>(wParam);</span><br><span class="line">        <span class="comment">// 分析菜单选择:</span></span><br><span class="line">        <span class="keyword">switch</span> (wmId)</span><br><span class="line">        &#123;</span><br><span class="line">        <span class="keyword">case</span> IDM_ABOUT:</span><br><span class="line">            <span class="built_in">DialogBox</span>(hInst, <span class="built_in">MAKEINTRESOURCE</span>(IDD_ABOUTBOX), hWnd, About);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> IDM_EXIT:</span><br><span class="line">            <span class="built_in">DestroyWindow</span>(hWnd);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">DefWindowProc</span>(hWnd, message, wParam, lParam);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> WM_PAINT:</span><br><span class="line">    &#123;</span><br><span class="line">        PAINTSTRUCT ps;</span><br><span class="line">        HDC hdc = <span class="built_in">BeginPaint</span>(hWnd, &amp;ps);</span><br><span class="line">        <span class="comment">// <span class="doctag">TODO:</span> 在此处添加使用 hdc 的任何绘图代码...</span></span><br><span class="line">        <span class="built_in">EndPaint</span>(hWnd, &amp;ps);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> WM_DESTROY:</span><br><span class="line">        <span class="built_in">PostQuitMessage</span>(<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">DefWindowProc</span>(hWnd, message, wParam, lParam);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-5"><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">LRESULT CALLBACK <span class="title">WndProc</span><span class="params">(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">switch</span> (message)</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="keyword">case</span> WM_COMMAND:</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> wmId = <span class="built_in">LOWORD</span>(wParam);</span><br><span class="line">        <span class="comment">// 分析菜单选择:</span></span><br><span class="line">        <span class="keyword">switch</span> (wmId)</span><br><span class="line">        &#123;</span><br><span class="line">        <span class="keyword">case</span> IDM_ABOUT:</span><br><span class="line">            <span class="built_in">DialogBox</span>(hInst, <span class="built_in">MAKEINTRESOURCE</span>(IDD_ABOUTBOX), hWnd, About);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> IDM_EXIT:</span><br><span class="line">            <span class="built_in">DestroyWindow</span>(hWnd);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">DefWindowProc</span>(hWnd, message, wParam, lParam);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> WM_PAINT:</span><br><span class="line">    &#123;</span><br><span class="line">        PAINTSTRUCT ps;</span><br><span class="line">        HDC hdc = <span class="built_in">BeginPaint</span>(hWnd, &amp;ps);</span><br><span class="line">        <span class="comment">// <span class="doctag">TODO:</span> 在此处添加使用 hdc 的任何绘图代码...</span></span><br><span class="line"></span><br><span class="line">        HBRUSH hBr = <span class="built_in">CreateSolidBrush</span>(<span class="built_in">RGB</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>));</span><br><span class="line">        HGDIOBJ hBrOld = <span class="built_in">SelectObject</span>(hdc, hBr);</span><br><span class="line">        HFONT hFont = <span class="built_in">CreateFont</span>(<span class="number">50</span>, <span class="number">30</span>, <span class="number">0</span>, <span class="number">0</span>, FW_NORMAL, FALSE, FALSE,</span><br><span class="line">            FALSE, DEFAULT_CHARSET,</span><br><span class="line">            OUT_DEFAULT_PRECIS,</span><br><span class="line">            CLIP_DEFAULT_PRECIS,</span><br><span class="line">            DEFAULT_QUALITY,</span><br><span class="line">            DEFAULT_PITCH | FF_SWISS,</span><br><span class="line">            <span class="string">&quot;Arial&quot;</span>); <span class="comment">// 创建一个新的字体对象</span></span><br><span class="line">        HFONT hOldFont = (HFONT)<span class="built_in">SelectObject</span>(hdc, hFont);</span><br><span class="line"></span><br><span class="line">        <span class="type">const</span> CHAR* textbuf[] =</span><br><span class="line">        &#123; <span class="string">&quot;浙江工商大学欢迎你    &quot;</span> ,</span><br><span class="line">            <span class="string">&quot;江工商大学欢迎你    &quot;</span>,</span><br><span class="line">            <span class="string">&quot;工商大学欢迎你    &quot;</span>,</span><br><span class="line">            <span class="string">&quot;商大学欢迎你    &quot;</span>,</span><br><span class="line">            <span class="string">&quot;大学欢迎你    &quot;</span>,</span><br><span class="line">            <span class="string">&quot;学欢迎你    &quot;</span>,</span><br><span class="line">            <span class="string">&quot;欢迎你    &quot;</span>,</span><br><span class="line">            <span class="string">&quot;迎你    &quot;</span>,</span><br><span class="line">            <span class="string">&quot;你    &quot;</span></span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="built_in">SetBkColor</span>(hdc, <span class="built_in">RGB</span>(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>));</span><br><span class="line">        <span class="built_in">SetTextColor</span>(hdc, <span class="built_in">RGB</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> x = <span class="number">0</span>; x &lt; <span class="number">9</span>; x++) &#123;</span><br><span class="line">            <span class="built_in">TextOut</span>(hdc, <span class="number">0</span>, <span class="number">0</span>, textbuf[x], <span class="built_in">lstrlen</span>(textbuf[x]));</span><br><span class="line">            <span class="built_in">Sleep</span>(<span class="number">1000</span>);</span><br><span class="line">            <span class="built_in">InvalidateRect</span>(hWnd, <span class="literal">NULL</span>, TRUE);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">Sleep</span>(<span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">        <span class="built_in">SelectObject</span>(hdc, hOldFont); <span class="comment">// 恢复原来的字体</span></span><br><span class="line">        <span class="built_in">DeleteObject</span>(hFont); <span class="comment">// 删除新创建的字体对象</span></span><br><span class="line">        <span class="built_in">SelectObject</span>(hdc, hBrOld);</span><br><span class="line">        <span class="built_in">DeleteObject</span>(hBr);</span><br><span class="line">        <span class="built_in">EndPaint</span>(hWnd, &amp;ps);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> WM_DESTROY:</span><br><span class="line">        <span class="built_in">PostQuitMessage</span>(<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">DefWindowProc</span>(hWnd, message, wParam, lParam);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+
+<hr>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://coleduck.cn">Coleduck</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://coleduck.cn/2023/05/14/0002-01/">https://coleduck.cn/2023/05/14/0002-01/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://coleduck.cn" target="_blank">Coleduck's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/C/">C++</a><a class="post-meta__tags" href="/tags/%E4%BD%9C%E4%B8%9A/">作业</a><a class="post-meta__tags" href="/tags/%E4%B8%93%E4%B8%9A%E8%AF%BE/">专业课</a><a class="post-meta__tags" href="/tags/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/">实验报告</a><a class="post-meta__tags" href="/tags/%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/">桌面应用程序</a><a class="post-meta__tags" href="/tags/Visual-Studio/">Visual Studio</a></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/05/14/0002-02/" title="VS C++桌面应用程序 - 鼠标键盘编程"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">VS C++桌面应用程序 - 鼠标键盘编程</div></div></a></div><div class="next-post pull-right"><a href="/2023/05/14/0004-04/" title="数字图像处理实验4"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">数字图像处理实验4</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/05/14/0002-02/" title="VS C++桌面应用程序 - 鼠标键盘编程"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-14</div><div class="title">VS C++桌面应用程序 - 鼠标键盘编程</div></div></a></div><div><a href="/2023/05/14/0002-03/" title="VS C++桌面应用程序 - 菜单和加速键"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-14</div><div class="title">VS C++桌面应用程序 - 菜单和加速键</div></div></a></div><div><a href="/2023/05/14/0002-04/" title="VS C++桌面应用程序 - 对话框练习"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-14</div><div class="title">VS C++桌面应用程序 - 对话框练习</div></div></a></div><div><a href="/2023/05/14/0002-06/" title="Qt实验 - 窗口布局"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-14</div><div class="title">Qt实验 - 窗口布局</div></div></a></div><div><a href="/2023/05/14/0002-05/" title="Qt实验 - 基础程序结构与控件使用"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-14</div><div class="title">Qt实验 - 基础程序结构与控件使用</div></div></a></div><div><a href="/2023/05/14/0002-07/" title="Qt实验 - 主窗口、资源的使用"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-14</div><div class="title">Qt实验 - 主窗口、资源的使用</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Coleduck</div><div class="author-info__description">我永远喜欢初音未来</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/12848975/"><i></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/coleduck1122" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:coleduck1122@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">学业繁忙 + 本人很懒，所以目前只记录了作业不常更新有趣的内容hhh</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#C-%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E5%AE%9E%E9%AA%8C1"><span class="toc-number">1.</span> <span class="toc-text">C++桌面应用程序实验1</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/18/0001-10/" title="杭州义益计组软件仿真 - 指令设计综合实验">杭州义益计组软件仿真 - 指令设计综合实验</a><time datetime="2023-06-18T03:38:39.568Z" title="发表于 2023-06-18 11:38:39">2023-06-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/18/0001-09/" title="杭州义益计组软件仿真 - 带移位模型机实验">杭州义益计组软件仿真 - 带移位模型机实验</a><time datetime="2023-06-18T03:38:33.138Z" title="发表于 2023-06-18 11:38:33">2023-06-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/18/0002-09/" title="Qt实验 - 二维绘图">Qt实验 - 二维绘图</a><time datetime="2023-06-18T03:20:03.408Z" title="发表于 2023-06-18 11:20:03">2023-06-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/05/14/0001-08/" title="杭州义益计组软件仿真 - 简单模型机循环加(减)法实验">杭州义益计组软件仿真 - 简单模型机循环加(减)法实验</a><time datetime="2023-05-14T06:09:32.006Z" title="发表于 2023-05-14 14:09:32">2023-05-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/05/14/0001-07/" title="杭州义益计组软件仿真 - 存储器读写实验">杭州义益计组软件仿真 - 存储器读写实验</a><time datetime="2023-05-14T06:09:32.005Z" title="发表于 2023-05-14 14:09:32">2023-05-14</time></div></div></div></div></div></div></main><footer id="footer" style="background: linear-gradient(39deg, #39C5BB 0%, #39C5BB 100%)"><div id="footer-wrap"><div class="copyright">&copy;2023 By Coleduck</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">浙ICP备2023006941号-1</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>function loadWaline () {
+  function initWaline () {
+    const waline = Waline.init(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://vercel.coleduck.cn/',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: false,
+    }, null))
+  }
+
+  const walineCSSLoad = document.getElementById('waline-css')
+
+  if (typeof Waline === 'object') {
+    walineCSSLoad ? initWaline() : getCSS('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.css','waline-css').then(initWaline)
+  }
+  else {
+    getCSS('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.css','waline-css').then(() => {
+      getScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.js').then(initWaline)
+    })
+  }
+}
+
+if ('Waline' === 'Waline' || !true) {
+  if (true) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+  else setTimeout(loadWaline, 0)
+} else {
+  function loadOtherComment () {
+    loadWaline()
+  }
+}</script></div><div class="aplayer no-destroy" data-id="8201461411" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script>(function(d, w, c) {
+    w.ChatraID = 'RHc7h8borGPjsRDwG';
+    var s = d.createElement('script');
+    w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments);
+    };
+    s.async = true;
+    s.src = 'https://call.chatra.io/chatra.js';
+    if (d.head) d.head.appendChild(s);
+})(document, window, 'Chatra');
+
+if (true) {
+  var chatBtnFn = () => {
+    var chatBtn = document.getElementById("chat_btn")
+    chatBtn.addEventListener("click", function(){
+      Chatra('openChat')
+    });
+  }
+  chatBtnFn()
+} else {
+  if (true) {
+    function chatBtnHide () {
+      Chatra('hide')
+    }
+    function chatBtnShow () {
+      Chatra('show')
+    }
+  }
+}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/no-pjax/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></body></html>

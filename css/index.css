@@ -2592,6 +2592,11 @@ h1.page-title + .tag-cloud-list {
   margin-top: 20px;
   padding: 20px 24px;
 }
+@media screen and (max-width: 768px) {
+  #aside-content .card-widget:not(#card-toc) {
+    display: none;
+  }
+}
 #aside-content .card-info .author-info__name {
   font-weight: 500;
   font-size: 1.57em;
@@ -4892,6 +4897,12 @@ h1.page-title + .tag-cloud-list {
 }
 #waline-wrap .wl-comment-actions > button:not(last-child) {
   padding-right: 4px;
+}
+#waline-wrap textarea {
+  background: url("https://s2.loli.net/2023/05/06/KQgOL8UlPXkzoFI.jpg") 100% 100% no-repeat;
+}
+#waline-wrap textarea:focus {
+  background-image: none;
 }
 .fireworks {
   position: fixed;

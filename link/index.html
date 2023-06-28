@@ -1,16 +1,16 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>友情链接 | Coleduck's Blog</title><meta name="author" content="Coleduck"><meta name="copyright" content="Coleduck"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="还有很多朋友没能列进来，主要是我不知道你们的B站账号，快和我互关！！！">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>友情链接 | Coleduck's Blog</title><meta name="author" content="Coleduck"><meta name="copyright" content="Coleduck"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="我永远喜欢初音未来">
 <meta property="og:type" content="website">
 <meta property="og:title" content="友情链接">
-<meta property="og:url" content="https://coleduck1122.github.io/link/index.html">
+<meta property="og:url" content="https://coleduck.cn/link/index.html">
 <meta property="og:site_name" content="Coleduck&#39;s Blog">
-<meta property="og:description" content="还有很多朋友没能列进来，主要是我不知道你们的B站账号，快和我互关！！！">
+<meta property="og:description" content="我永远喜欢初音未来">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg">
 <meta property="article:published_time" content="2023-03-02T10:12:15.000Z">
-<meta property="article:modified_time" content="2023-03-02T12:11:13.427Z">
+<meta property="article:modified_time" content="2023-05-11T13:20:02.357Z">
 <meta property="article:author" content="Coleduck">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://coleduck1122.github.io/link/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://coleduck.cn/link/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
@@ -56,7 +56,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2023-03-02 20:11:13'
+  postUpdate: '2023-05-11 21:20:02'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -142,27 +142,8 @@
       }
       const t = saveToLocal.get('theme')
     
-          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
-          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
-          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
-
-          if (t === undefined) {
-            if (isLightMode) activateLightMode()
-            else if (isDarkMode) activateDarkMode()
-            else if (isNotSpecified || hasNoSupport) {
-              const now = new Date()
-              const hour = now.getHours()
-              const isNight = hour <= 6 || hour >= 18
-              isNight ? activateDarkMode() : activateLightMode()
-            }
-            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
-              if (saveToLocal.get('theme') === undefined) {
-                e.matches ? activateDarkMode() : activateLightMode()
-              }
-            })
-          } else if (t === 'light') activateLightMode()
-          else activateDarkMode()
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
       const asideStatus = saveToLocal.get('aside-status')
       if (asideStatus !== undefined) {
@@ -196,269 +177,50 @@ window.addEventListener('load',()=> { preloader.endLoading() })
 if (true) {
   document.addEventListener('pjax:send', () => { preloader.initLoading() })
   document.addEventListener('pjax:complete', () => { preloader.endLoading() })
-}</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fas fa-tags"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background: linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347)"><nav id="nav"><span id="blog-info"><a href="/" title="Coleduck's Blog"><img class="site-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg"/><span class="site-name">Coleduck's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fas fa-tags"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">友情链接</h1></div></header><main class="layout" id="content-inner"><div id="page"><div id="article-container"><div class="flink"><h2 id="高中友情"><a href="#高中友情" class="headerlink" title="高中友情"></a>高中友情</h2><div class="flink-desc">难忘的高中朋友</div> <div class="flink-list">
-  <div class="flink-list-item">
-    <a href="https://space.bilibili.com/425570385/" title="黄zl" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/02/ZlOTfukYx3hBUr6.jpg" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="黄zl" />
-      </div>
-      <div class="flink-item-name">黄zl</div> 
-      <div class="flink-item-desc" title="好兄弟，不多说">好兄弟，不多说</div>
-    </a>
-  </div>
-  <div class="flink-list-item">
-    <a href="https://space.bilibili.com/188643463/" title="鲍ys" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/02/IPqMKws1FOEYZCT.jpg" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="鲍ys" />
-      </div>
-      <div class="flink-item-name">鲍ys</div> 
-      <div class="flink-item-desc" title="高中室友，也是同大学同专业的人啦">高中室友，也是同大学同专业的人啦</div>
-    </a>
-  </div>
-  <div class="flink-list-item">
-    <a href="https://space.bilibili.com/516685577/" title="占ht" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/02/Yoq2HShp6FgGf8j.jpg" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="占ht" />
-      </div>
-      <div class="flink-item-name">占ht</div> 
-      <div class="flink-item-desc" title="志同道合的朋友">志同道合的朋友</div>
-    </a>
-  </div>
-  <div class="flink-list-item">
-    <a href="https://space.bilibili.com/45960016/" title="蒋rw" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/02/eQJsSYjyhR7u2CK.jpg" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="蒋rw" />
-      </div>
-      <div class="flink-item-name">蒋rw</div> 
-      <div class="flink-item-desc" title="初中时就认识了">初中时就认识了</div>
-    </a>
-  </div>
-  <div class="flink-list-item">
-    <a href="https://space.bilibili.com/487559232/" title="吴jb" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/03/HV8mGFlDLzn3Msi.jpg" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="吴jb" />
-      </div>
-      <div class="flink-item-name">吴jb</div> 
-      <div class="flink-item-desc" title="帮我拿了我遗忘在公交车上的书包">帮我拿了我遗忘在公交车上的书包</div>
-    </a>
-  </div>
-  <div class="flink-list-item">
-    <a href="https://space.bilibili.com/1278468119/" title="朱yx" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/03/TJ1FEaBSzDyIrxH.jpg" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="朱yx" />
-      </div>
-      <div class="flink-item-name">朱yx</div> 
-      <div class="flink-item-desc" title="宿管会认识的朋友">宿管会认识的朋友</div>
-    </a>
-  </div>
-  <div class="flink-list-item">
-    <a href="https://space.bilibili.com/1258685457/" title="叶yz" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/02/9eslJPdumigTnEw.jpg" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="叶yz" />
-      </div>
-      <div class="flink-item-name">叶yz</div> 
-      <div class="flink-item-desc" title="高中关系最好的女性朋友">高中关系最好的女性朋友</div>
-    </a>
-  </div></div><h2 id="大学室友"><a href="#大学室友" class="headerlink" title="大学室友"></a>大学室友</h2><div class="flink-desc">三个沙雕大学室友</div> <div class="flink-list">
-  <div class="flink-list-item">
-    <a href="https://space.bilibili.com/454681109/" title="刘t" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/02/lHeoXwTvBMy2ngr.jpg" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="刘t" />
-      </div>
-      <div class="flink-item-name">刘t</div> 
-      <div class="flink-item-desc" title="是个沉默多金且温柔的好男人！">是个沉默多金且温柔的好男人！</div>
-    </a>
-  </div>
-  <div class="flink-list-item">
-    <a href="https://space.bilibili.com/285947059/" title="孙yt" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/02/IS7OivmQK8ldRuG.jpg" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="孙yt" />
-      </div>
-      <div class="flink-item-name">孙yt</div> 
-      <div class="flink-item-desc" title="124的开心果">124的开心果</div>
-    </a>
-  </div>
-  <div class="flink-list-item">
-    <a href="https://space.bilibili.com/285870200/" title="徐jq" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/02/taYxCjyHFISTk2i.jpg" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="徐jq" />
-      </div>
-      <div class="flink-item-name">徐jq</div> 
-      <div class="flink-item-desc" title="124的技术担当">124的技术担当</div>
-    </a>
-  </div></div><h2 id="大学里的朋友"><a href="#大学里的朋友" class="headerlink" title="大学里的朋友"></a>大学里的朋友</h2><div class="flink-desc">还有待更新！</div> <div class="flink-list">
-  <div class="flink-list-item">
-    <a href="https://space.bilibili.com/25812379/" title="蓝ls" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/02/jUK13g8oDA5nqOS.jpg" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="蓝ls" />
-      </div>
-      <div class="flink-item-name">蓝ls</div> 
-      <div class="flink-item-desc" title="小有名气的B站UP主">小有名气的B站UP主</div>
-    </a>
-  </div></div><h2 id="喜欢的UP主"><a href="#喜欢的UP主" class="headerlink" title="喜欢的UP主"></a>喜欢的UP主</h2><div class="flink-desc">大家都好厉害呀</div> <div class="flink-list">
-  <div class="flink-list-item">
-    <a href="https://space.bilibili.com/399918500/" title="初音未来" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/02/uONlV52xUkBPmXb.webp" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="初音未来" />
-      </div>
-      <div class="flink-item-name">初音未来</div> 
-      <div class="flink-item-desc" title="精神支柱！">精神支柱！</div>
-    </a>
-  </div>
-  <div class="flink-list-item">
-    <a href="https://space.bilibili.com/546195/" title="老番茄" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/19/faTH6OPM8Wjxwlv.webp" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="老番茄" />
-      </div>
-      <div class="flink-item-name">老番茄</div> 
-      <div class="flink-item-desc" title="制作的游戏视频很幽默有趣，而且还是学霸，是我很崇拜的人">制作的游戏视频很幽默有趣，而且还是学霸，是我很崇拜的人</div>
-    </a>
-  </div>
-  <div class="flink-list-item">
-    <a href="https://space.bilibili.com/691415738/" title="苏打baka" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/19/XdwgPCA9q1IE3uk.webp" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="苏打baka" />
-      </div>
-      <div class="flink-item-name">苏打baka</div> 
-      <div class="flink-item-desc" title="喜欢玩MC的科技UP主，我是从MC的视频里发现的">喜欢玩MC的科技UP主，我是从MC的视频里发现的</div>
-    </a>
-  </div>
-  <div class="flink-list-item">
-    <a href="https://space.bilibili.com/453972/" title="阿狸才不是受" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/19/Yf4NVO2DckmTsKu.webp" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="阿狸才不是受" />
-      </div>
-      <div class="flink-item-name">阿狸才不是受</div> 
-      <div class="flink-item-desc" title="人美心善的显卡姬，还会装修，非常之厉害">人美心善的显卡姬，还会装修，非常之厉害</div>
-    </a>
-  </div>
-  <div class="flink-list-item">
-    <a href="https://space.bilibili.com/53456/" title="Warma" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/19/IvElVndUsZmzr19.webp" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Warma" />
-      </div>
-      <div class="flink-item-name">Warma</div> 
-      <div class="flink-item-desc" title="视频是卡通风格，是个很可爱的女孩子">视频是卡通风格，是个很可爱的女孩子</div>
-    </a>
-  </div>
-  <div class="flink-list-item">
-    <a href="https://space.bilibili.com/396806711/" title="Vicky萱萱" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/19/XNU9EhQMSHu6AFb.webp" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Vicky萱萱" />
-      </div>
-      <div class="flink-item-name">Vicky萱萱</div> 
-      <div class="flink-item-desc" title="在音乐方面天赋异禀，年龄还比我小，后生可畏啊">在音乐方面天赋异禀，年龄还比我小，后生可畏啊</div>
-    </a>
-  </div>
-  <div class="flink-list-item">
-    <a href="https://space.bilibili.com/523085457/" title="不更新A" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/19/vngFKqriHfuN6GX.webp" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="不更新A" />
-      </div>
-      <div class="flink-item-name">不更新A</div> 
-      <div class="flink-item-desc" title="主要玩MC，我觉得她的声音很好听，不过正如其名，这位UP主时长鸽视频，但是意外的肝！">主要玩MC，我觉得她的声音很好听，不过正如其名，这位UP主时长鸽视频，但是意外的肝！</div>
-    </a>
-  </div>
-  <div class="flink-list-item">
-    <a href="https://space.bilibili.com/860464/" title="少年五之歌" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/19/TN6ycq4fr72v8pO.webp" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="少年五之歌" />
-      </div>
-      <div class="flink-item-name">少年五之歌</div> 
-      <div class="flink-item-desc" title="我初中时看她的MC视频，时隔多年她又回坑了，现在我大学了，她也已经成家了，满满的回忆啊">我初中时看她的MC视频，时隔多年她又回坑了，现在我大学了，她也已经成家了，满满的回忆啊</div>
-    </a>
-  </div></div><h2 id="喜欢的游戏"><a href="#喜欢的游戏" class="headerlink" title="喜欢的游戏"></a>喜欢的游戏</h2><div class="flink-desc">来陪我一起玩！</div> <div class="flink-list">
-  <div class="flink-list-item">
-    <a href="https://www.mcbbs.net/forum.php" title="MineCraft" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/19/zoVswIuyHDdLYc7.webp" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="MineCraft" />
-      </div>
-      <div class="flink-item-name">MineCraft</div> 
-      <div class="flink-item-desc" title="我可是8年老玩家了，MC真的是yyds，我该如何安利它">我可是8年老玩家了，MC真的是yyds，我该如何安利它</div>
-    </a>
-  </div>
-  <div class="flink-list-item">
-    <a href="https://space.bilibili.com/414149787/" title="Phigros" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/19/BAbJKRtpaEC2kUD.webp" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Phigros" />
-      </div>
-      <div class="flink-item-name">Phigros</div> 
-      <div class="flink-item-desc" title="我的启蒙音游，而且完全免费，小鸽游真的太良心了">我的启蒙音游，而且完全免费，小鸽游真的太良心了</div>
-    </a>
-  </div>
-  <div class="flink-list-item">
-    <a href="https://space.bilibili.com/13148307/" title="Project Sekai" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/19/VZmyjBzudo7wkGi.webp" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Project Sekai" />
-      </div>
-      <div class="flink-item-name">Project Sekai</div> 
-      <div class="flink-item-desc" title="我玩的是日服，里面有超多V家歌曲，还有我最喜欢的初音未来嘿嘿">我玩的是日服，里面有超多V家歌曲，还有我最喜欢的初音未来嘿嘿</div>
-    </a>
-  </div>
-  <div class="flink-list-item">
-    <a href="https://osu.ppy.sh/home" title="OSU" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/19/1IzYHPCdl68enDR.webp" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="OSU" />
-      </div>
-      <div class="flink-item-name">OSU</div> 
-      <div class="flink-item-desc" title="新发现了一款电脑音游，很有创意，最强大的地方在于它的曲库实在是非常庞大">新发现了一款电脑音游，很有创意，最强大的地方在于它的曲库实在是非常庞大</div>
-    </a>
-  </div>
-  <div class="flink-list-item">
-    <a href="https://tieba.baidu.com/p/5197821131" title="maimai" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/19/3IwsfA7pTgYqSzK.webp" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="maimai" />
-      </div>
-      <div class="flink-item-name">maimai</div> 
-      <div class="flink-item-desc" title="游戏厅里偶然发现的街机音游，感觉很有趣，只是目前还很菜hhh">游戏厅里偶然发现的街机音游，感觉很有趣，只是目前还很菜hhh</div>
-    </a>
-  </div>
-  <div class="flink-list-item">
-    <a href="https://store.steampowered.com/" title="Steam" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/19/mK7rZAIQ82W6ec5.webp" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Steam" />
-      </div>
-      <div class="flink-item-name">Steam</div> 
-      <div class="flink-item-desc" title="好友代码1205695890，快加我！">好友代码1205695890，快加我！</div>
-    </a>
-  </div></div><h2 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h2><div class="flink-desc">资源网站分享给大家</div> <div class="flink-list">
-  <div class="flink-list-item">
-    <a href="https://hexo.io/zh-tw/" title="Hexo" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Hexo" />
-      </div>
-      <div class="flink-item-name">Hexo</div> 
-      <div class="flink-item-desc" title="我的两个博客都是用它搭建的！">我的两个博客都是用它搭建的！</div>
-    </a>
-  </div>
-  <div class="flink-list-item">
-    <a href="https://github.com/" title="Github" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/19/DstTu5KGCWol98P.webp" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Github" />
-      </div>
-      <div class="flink-item-name">Github</div> 
-      <div class="flink-item-desc" title="最好用的学习资源共享的开源网站">最好用的学习资源共享的开源网站</div>
-    </a>
-  </div>
-  <div class="flink-list-item">
-    <a href="https://leetcode.cn/" title="力扣" target="_blank">
-      <div class="flink-item-icon">
-        <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/19/yqzEIVZ6NGXwaRc.webp" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="力扣" />
-      </div>
-      <div class="flink-item-name">力扣</div> 
-      <div class="flink-item-desc" title="全球极客挚爱的技术成长平台">全球极客挚爱的技术成长平台</div>
-    </a>
-  </div></div><p><br><br><br></p>
-<p><strong>还有很多朋友没能列进来，主要是我不知道你们的B站账号，快和我互关！！！</strong></p>
-</div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Coleduck</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/12848975/"><i></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/coleduck1122" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:coleduck1122@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/22/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E5%AE%9E%E9%AA%8C(1)/" title="数字图像处理实验1">数字图像处理实验1</a><time datetime="2023-03-22T04:36:23.257Z" title="发表于 2023-03-22 12:36:23">2023-03-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/22/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%9E%E9%AA%8C(1)/" title="Python与数据科学实验1 - Python入门练习">Python与数据科学实验1 - Python入门练习</a><time datetime="2023-03-22T04:12:54.391Z" title="发表于 2023-03-22 12:12:54">2023-03-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/22/%E8%AE%A1%E7%BB%84%E5%AE%9E%E9%AA%8C(3)/" title="计组实验3 - 移位运算器实验">计组实验3 - 移位运算器实验</a><time datetime="2023-03-22T03:23:21.080Z" title="发表于 2023-03-22 11:23:21">2023-03-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/21/%E5%89%91%E6%8C%87offer(6)/" title="第 6 天 搜索与回溯算法（简单）">第 6 天 搜索与回溯算法（简单）</a><time datetime="2023-03-21T07:23:20.391Z" title="发表于 2023-03-21 15:23:20">2023-03-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/21/%E5%89%91%E6%8C%87offer(5)/" title="第 5 天 查找算法（中等）">第 5 天 查找算法（中等）</a><time datetime="2023-03-21T07:22:35.311Z" title="发表于 2023-03-21 15:22:35">2023-03-21</time></div></div></div></div><div class="card-widget" id="card-newest-comments"><div class="item-headline"><i class="fas fa-comment-dots"></i><span>最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div><div class="card-widget card-categories"><div class="item-headline">
+}</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-edit"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/note/"><i class="fa-fw fa fa-file-text"></i><span> 笔记</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-thumb-tack"></i><span> 记录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fa fa-book"></i><span> 日志</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li><li><a class="site-page child" href="/friend/"><i class="fa-fw fa fa-address-book"></i><span> 同学录</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-star"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 图片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li><li><a class="site-page child" href="/idol/"><i class="fa-fw fas fa-heart"></i><span> 我推</span></a></li><li><a class="site-page child" href="/resource/"><i class="fa-fw fa fa-cube"></i><span> 资源网站</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-bookmark"></i><span> 作品集</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/page1/"><i class="fa-fw fa fa-code"></i><span> 悦寝</span></a></li><li><a class="site-page child" href="/page2/"><i class="fa-fw fa fa-code"></i><span> 待定</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-id-card"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background: linear-gradient(39deg, #39C5BB 0%, #39C5BB 100%)"><nav id="nav"><span id="blog-info"><a href="/" title="Coleduck's Blog"><img class="site-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg"/><span class="site-name">Coleduck's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-edit"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/note/"><i class="fa-fw fa fa-file-text"></i><span> 笔记</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-thumb-tack"></i><span> 记录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fa fa-book"></i><span> 日志</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li><li><a class="site-page child" href="/friend/"><i class="fa-fw fa fa-address-book"></i><span> 同学录</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-star"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 图片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li><li><a class="site-page child" href="/idol/"><i class="fa-fw fas fa-heart"></i><span> 我推</span></a></li><li><a class="site-page child" href="/resource/"><i class="fa-fw fa fa-cube"></i><span> 资源网站</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-bookmark"></i><span> 作品集</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/page1/"><i class="fa-fw fa fa-code"></i><span> 悦寝</span></a></li><li><a class="site-page child" href="/page2/"><i class="fa-fw fa fa-code"></i><span> 待定</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-id-card"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">友情链接</h1></div></header><main class="layout" id="content-inner"><div id="page"><div id="article-container"><div class="flink"><script>(()=>{
+  const replaceSymbol = (str) => {
+    return str.replace(/[\p{P}\p{S}]/gu, "-")
+  }
+
+  let result = ""
+  fetch("/../myLink/link.json")
+    .then(response => response.json())
+    .then(str => {
+      for(let i = 0; i < str.length; i++){
+        const replaceClassName = replaceSymbol(str[i].class_name)
+        const className = str[i].class_name ? `<h2 id="${replaceClassName}"><a href="#${replaceClassName}" class="headerlink" title="${str[i].class_name}"></a>${str[i].class_name}</h2>` : ""
+        const classDesc = str[i].class_desc ? `<div class="flink-desc">${str[i].class_desc}</div>` : ""
+        
+        let listResult = ""
+        const lists = str[i].link_list
+        for(let j = 0; j < lists.length; j++){
+          listResult += `
+            <div class="flink-list-item">
+              <a href="${lists[j].link}" title="${lists[j].name}" target="_blank">
+                <div class="flink-item-icon">
+                  <img class="no-lightbox" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="${lists[j].avatar}" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="${lists[j].name}" />
+                </div>
+                <div class="flink-item-name">${lists[j].name}</div> 
+                <div class="flink-item-desc" title="${lists[j].descr}">${lists[j].descr}</div>
+              </a>
+            </div>`
+        }
+
+        result += `${className}${classDesc} <div class="flink-list">${listResult}</div>`
+      }
+
+      document.querySelector(".flink").insertAdjacentHTML("afterbegin", result)
+      window.lazyLoadInstance && window.lazyLoadInstance.update()
+    })
+})()
+</script></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Coleduck</div><div class="author-info__description">我永远喜欢初音未来</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/12848975/"><i></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/coleduck1122" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:coleduck1122@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">学业繁忙 + 本人很懒，所以目前只记录了作业不常更新有趣的内容hhh</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/18/0001-10/" title="杭州义益计组软件仿真 - 指令设计综合实验">杭州义益计组软件仿真 - 指令设计综合实验</a><time datetime="2023-06-18T03:38:39.568Z" title="发表于 2023-06-18 11:38:39">2023-06-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/18/0001-09/" title="杭州义益计组软件仿真 - 带移位模型机实验">杭州义益计组软件仿真 - 带移位模型机实验</a><time datetime="2023-06-18T03:38:33.138Z" title="发表于 2023-06-18 11:38:33">2023-06-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/18/0002-09/" title="Qt实验 - 二维绘图">Qt实验 - 二维绘图</a><time datetime="2023-06-18T03:20:03.408Z" title="发表于 2023-06-18 11:20:03">2023-06-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/05/14/0001-08/" title="杭州义益计组软件仿真 - 简单模型机循环加(减)法实验">杭州义益计组软件仿真 - 简单模型机循环加(减)法实验</a><time datetime="2023-05-14T06:09:32.006Z" title="发表于 2023-05-14 14:09:32">2023-05-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/05/14/0001-07/" title="杭州义益计组软件仿真 - 存储器读写实验">杭州义益计组软件仿真 - 存储器读写实验</a><time datetime="2023-05-14T06:09:32.005Z" title="发表于 2023-05-14 14:09:32">2023-05-14</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
             <i class="fas fa-folder-open"></i>
             <span>分类</span>
-            <a class="card-more-btn" href="/categories/" title="查看更多">
-    <i class="fas fa-angle-right"></i></a>
+            
             </div>
             <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-%E8%AF%AD%E6%B3%95%E8%AF%BE/"><span class="card-category-list-name">C + + 语法课</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/"><span class="card-category-list-name">C++桌面应用程序</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C%E8%AF%AD%E8%A8%80%E8%AF%AD%E6%B3%95%E8%AF%BE/"><span class="card-category-list-name">C语言语法课</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Java%E8%AF%AD%E6%B3%95%E8%AF%BE/"><span class="card-category-list-name">Java语法课</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/"><span class="card-category-list-name">Python与数据科学</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Python%E8%AF%AD%E6%B3%95%E8%AF%BE/"><span class="card-category-list-name">Python语法课</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%91%E6%8C%87offer%E5%88%B7%E9%A2%98%E6%89%8B%E5%86%8C/"><span class="card-category-list-name">剑指offer刷题手册</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"><span class="card-category-list-name">数字图像处理</span><span class="card-category-list-count">1</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/OpenCV/" style="font-size: 1.1em; color: #999">OpenCV</a> <a href="/tags/%E8%83%8C%E5%8D%95%E8%AF%8D/" style="font-size: 1.33em; color: #99a2af">背单词</a> <a href="/tags/%E6%97%A5%E6%9C%AC%E6%A0%87%E5%87%86%E8%AF%AD/" style="font-size: 1.21em; color: #999ea4">日本标准语</a> <a href="/tags/Java/" style="font-size: 1.1em; color: #999">Java</a> <a href="/tags/Python/" style="font-size: 1.33em; color: #99a2af">Python</a> <a href="/tags/Visual-Studio/" style="font-size: 1.16em; color: #999b9e">Visual Studio</a> <a href="/tags/%E8%AE%B0%E5%BD%95/" style="font-size: 1.1em; color: #999">记录</a> <a href="/tags/%E9%9F%B3%E4%B9%90/" style="font-size: 1.1em; color: #999">音乐</a> <a href="/tags/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/" style="font-size: 1.44em; color: #99a7ba">实验报告</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" style="font-size: 1.21em; color: #999ea4">计算机组成原理</a> <a href="/tags/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" style="font-size: 1.1em; color: #999">数字图像处理</a> <a href="/tags/Visual-Studio-Code/" style="font-size: 1.1em; color: #999">Visual Studio Code</a> <a href="/tags/C/" style="font-size: 1.21em; color: #999ea4">C++</a> <a href="/tags/%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/" style="font-size: 1.16em; color: #999b9e">桌面应用程序</a> <a href="/tags/%E8%8B%B1%E8%AF%AD%E5%85%AD%E7%BA%A7/" style="font-size: 1.16em; color: #999b9e">英语六级</a> <a href="/tags/%E8%AF%BE%E7%A8%8B/" style="font-size: 1.27em; color: #99a0a9">课程</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E9%A2%98/" style="font-size: 1.39em; color: #99a4b4">编程题</a> <a href="/tags/C/" style="font-size: 1.1em; color: #999">C</a> <a href="/tags/%E4%BD%9C%E4%B8%9A/" style="font-size: 1.5em; color: #99a9bf">作业</a> <a href="/tags/%E4%B8%93%E4%B8%9A%E8%AF%BE/" style="font-size: 1.5em; color: #99a9bf">专业课</a> <a href="/tags/%E6%97%A5%E8%AF%AD/" style="font-size: 1.1em; color: #999">日语</a> <a href="/tags/%E5%89%91%E6%8C%87offer/" style="font-size: 1.39em; color: #99a4b4">剑指offer</a> <a href="/tags/%E5%8A%9B%E6%89%A3/" style="font-size: 1.39em; color: #99a4b4">力扣</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/" style="font-size: 1.21em; color: #999ea4">数据科学</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><span class="card-archive-list-count">26</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">26</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2023-03-01T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-03-22T05:00:42.103Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background: linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347)"><div id="footer-wrap"><div class="copyright">&copy;2023 By Coleduck</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script>function panguFn () {
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/"><span class="card-category-list-name">C++桌面应用程序</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/"><span class="card-category-list-name">Python与数据科学</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"><span class="card-category-list-name">数字图像处理</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E8%AF%BE/"><span class="card-category-list-name">计算机组成原理实验课</span><span class="card-category-list-count">10</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Python/" style="font-size: 1.39em; color: #99a4b4">Python</a> <a href="/tags/%E4%BD%9C%E4%B8%9A/" style="font-size: 1.5em; color: #99a9bf">作业</a> <a href="/tags/Visual-Studio-Code/" style="font-size: 1.16em; color: #999b9e">Visual Studio Code</a> <a href="/tags/%E4%B8%93%E4%B8%9A%E8%AF%BE/" style="font-size: 1.5em; color: #99a9bf">专业课</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" style="font-size: 1.33em; color: #99a2af">计算机组成原理</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/" style="font-size: 1.33em; color: #99a2af">数据科学</a> <a href="/tags/C/" style="font-size: 1.27em; color: #99a0a9">C++</a> <a href="/tags/OpenCV/" style="font-size: 1.16em; color: #999b9e">OpenCV</a> <a href="/tags/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/" style="font-size: 1.44em; color: #99a7ba">实验报告</a> <a href="/tags/EDA%E5%AE%9E%E9%AA%8C%E7%AE%B1/" style="font-size: 1.1em; color: #999">EDA实验箱</a> <a href="/tags/QT-creator/" style="font-size: 1.21em; color: #999ea4">QT creator</a> <a href="/tags/Logisim/" style="font-size: 1.1em; color: #999">Logisim</a> <a href="/tags/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" style="font-size: 1.16em; color: #999b9e">数字图像处理</a> <a href="/tags/Visual-Studio/" style="font-size: 1.16em; color: #999b9e">Visual Studio</a> <a href="/tags/%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/" style="font-size: 1.27em; color: #99a0a9">桌面应用程序</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><span class="card-archive-list-count">30</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">33</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2023-03-01T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-06-28T02:56:28.897Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background: linear-gradient(39deg, #39C5BB 0%, #39C5BB 100%)"><div id="footer-wrap"><div class="copyright">&copy;2023 By Coleduck</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">浙ICP备2023006941号-1</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script>function panguFn () {
   if (typeof pangu === 'object') pangu.autoSpacingPage()
   else {
     getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
@@ -476,126 +238,38 @@ function panguInit () {
   }
 }
 
-document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>function loadValine () {
-  function initValine () {
-    const valine = new Valine(Object.assign({
-      el: '#vcomment',
-      appId: 'UqsNwptmMTTWLuT0aqQ3o247-MdYXbMMI',
-      appKey: 'oaJU1IoXJqq4UtRMW5Mfrt2R',
-      avatar: 'monsterid',
-      serverURLs: '',
-      emojiMaps: "",
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>function loadWaline () {
+  function initWaline () {
+    const waline = Waline.init(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://vercel.coleduck.cn/',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
       path: window.location.pathname,
-      visitor: false
+      comment: false,
     }, null))
   }
 
-  if (typeof Valine === 'function') initValine() 
-  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+  const walineCSSLoad = document.getElementById('waline-css')
+
+  if (typeof Waline === 'object') {
+    walineCSSLoad ? initWaline() : getCSS('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.css','waline-css').then(initWaline)
+  }
+  else {
+    getCSS('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.css','waline-css').then(() => {
+      getScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.js').then(initWaline)
+    })
+  }
 }
 
-if ('Valine' === 'Valine' || !true) {
-  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
-  else setTimeout(loadValine, 0)
+if ('Waline' === 'Waline' || !true) {
+  if (true) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+  else setTimeout(loadWaline, 0)
 } else {
   function loadOtherComment () {
-    loadValine()
+    loadWaline()
   }
-}</script></div><script src="https://cdn.jsdelivr.net/npm/blueimp-md5/js/md5.min.js"></script><script>window.addEventListener('load', () => {
-  const changeContent = (content) => {
-    if (content === '') return content
-
-    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
-    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
-    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
-    content = content.replace(/<[^>]+>/g,"") // remove html tag
-
-    if (content.length > 150) {
-      content = content.substring(0,150) + '...'
-    }
-    return content
-  }
-
-  const getIcon = (icon, mail) => {
-    if (icon) return icon
-    let defaultIcon = '?d=monsterid'
-    let iconUrl = `https://gravatar.loli.net/avatar/${md5(mail.toLowerCase()) + defaultIcon}`
-    return iconUrl
-  }
-
-  const generateHtml = array => {
-    let result = ''
-
-    if (array.length) {
-      for (let i = 0; i < array.length; i++) {
-        result += '<div class=\'aside-list-item\'>'
-
-        if (true) {
-          const name = 'data-lazy-src'
-          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
-        }
-
-        result += `<div class='content'>
-        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
-        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
-        </div></div>`
-      }
-    } else {
-      result += '没有评论'
-    }
-
-    let $dom = document.querySelector('#card-newest-comments .aside-list')
-    $dom.innerHTML= result
-    window.lazyLoadInstance && window.lazyLoadInstance.update()
-    window.pjax && window.pjax.refresh($dom)
-  }
-
-  const getComment = () => {
-    const serverURL = 'https://UqsNwptm.api.lncldglobal.com'
-
-    var settings = {
-      "method": "GET",
-      "headers": {
-        "X-LC-Id": 'UqsNwptmMTTWLuT0aqQ3o247-MdYXbMMI',
-        "X-LC-Key": 'oaJU1IoXJqq4UtRMW5Mfrt2R',
-        "Content-Type": "application/json"
-      },
-    }
-
-    fetch(`${serverURL}/1.1/classes/Comment?limit=6&order=-createdAt`,settings)
-      .then(response => response.json())
-      .then(data => {
-        const valineArray = data.results.map(function (e) {
-          return {
-            'avatar': getIcon(e.QQAvatar, e.mail),
-            'content': changeContent(e.comment),
-            'nick': e.nick,
-            'url': e.url + '#' + e.objectId,
-            'date': e.updatedAt,
-          }
-        })
-        saveToLocal.set('valine-newest-comments', JSON.stringify(valineArray), 10/(60*24))
-        generateHtml(valineArray)
-      }).catch(e => {
-        const $dom = document.querySelector('#card-newest-comments .aside-list')
-        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
-      }) 
-  }
-
-  const newestCommentInit = () => {
-    if (document.querySelector('#card-newest-comments .aside-list')) {
-      const data = saveToLocal.get('valine-newest-comments')
-      if (data) {
-        generateHtml(JSON.parse(data))
-      } else {
-        getComment()
-      }
-    }
-  }
-
-  newestCommentInit()
-  document.addEventListener('pjax:complete', newestCommentInit)
-})</script><div class="aplayer no-destroy" data-id="7746777058" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+}</script></div><div class="aplayer no-destroy" data-id="8201461411" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
 POWERMODE.shake = true;
 POWERMODE.mobile = false;
 document.body.addEventListener('input', POWERMODE);
@@ -630,7 +304,7 @@ if (true) {
 }</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
 
 var pjax = new Pjax({
-  elements: 'a:not([target="_blank"]):not([href="/music/"]):not([href="/no-pjax/"])',
+  elements: 'a:not([target="_blank"]):not([href="/no-pjax/"])',
   selectors: pjaxSelectors,
   cacheBust: false,
   analytics: false,

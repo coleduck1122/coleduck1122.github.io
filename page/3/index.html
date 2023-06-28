@@ -1,12 +1,14 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Coleduck's Blog - hello world</title><meta name="author" content="Coleduck"><meta name="copyright" content="Coleduck"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Coleduck's Blog</title><meta name="author" content="Coleduck"><meta name="copyright" content="Coleduck"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="我永远喜欢初音未来">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Coleduck&#39;s Blog">
-<meta property="og:url" content="https://coleduck1122.github.io/page/3/index.html">
+<meta property="og:url" content="https://coleduck.cn/page/3/index.html">
 <meta property="og:site_name" content="Coleduck&#39;s Blog">
+<meta property="og:description" content="我永远喜欢初音未来">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg">
 <meta property="article:author" content="Coleduck">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://coleduck1122.github.io/page/3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://coleduck.cn/page/3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
@@ -52,7 +54,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2023-03-22 13:00:42'
+  postUpdate: '2023-06-28 10:56:29'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -138,27 +140,8 @@
       }
       const t = saveToLocal.get('theme')
     
-          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
-          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
-          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
-
-          if (t === undefined) {
-            if (isLightMode) activateLightMode()
-            else if (isDarkMode) activateDarkMode()
-            else if (isNotSpecified || hasNoSupport) {
-              const now = new Date()
-              const hour = now.getHours()
-              const isNight = hour <= 6 || hour >= 18
-              isNight ? activateDarkMode() : activateLightMode()
-            }
-            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
-              if (saveToLocal.get('theme') === undefined) {
-                e.matches ? activateDarkMode() : activateLightMode()
-              }
-            })
-          } else if (t === 'light') activateLightMode()
-          else activateDarkMode()
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
       const asideStatus = saveToLocal.get('aside-status')
       if (asideStatus !== undefined) {
@@ -192,184 +175,37 @@ window.addEventListener('load',()=> { preloader.endLoading() })
 if (true) {
   document.addEventListener('pjax:send', () => { preloader.initLoading() })
   document.addEventListener('pjax:complete', () => { preloader.endLoading() })
-}</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fas fa-tags"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://s2.loli.net/2023/03/01/9A3YmNcZrBdtOEK.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Coleduck's Blog"><img class="site-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg"/><span class="site-name">Coleduck's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fas fa-tags"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Coleduck's Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/coleduck1122" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:coleduck1122@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2023/03/02/%E6%97%A5%E8%AE%B0%E6%9C%AC(1)/" title="日记本 —— 第1章"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/02/Hhxs3j5acupCXvE.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="日记本 —— 第1章"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/03/02/%E6%97%A5%E8%AE%B0%E6%9C%AC(1)/" title="日记本 —— 第1章">日记本 —— 第1章</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-03-02T08:56:42.847Z" title="发表于 2023-03-02 16:56:42">2023-03-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%97%A5%E8%AE%B0%E6%9C%AC/">日记本</a></span></div><div class="content">2023.3.13 - 2023.3.26
-
-2023.3.13 (星期一)Nothing about it.
+}</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-edit"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/note/"><i class="fa-fw fa fa-file-text"></i><span> 笔记</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-thumb-tack"></i><span> 记录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fa fa-book"></i><span> 日志</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li><li><a class="site-page child" href="/friend/"><i class="fa-fw fa fa-address-book"></i><span> 同学录</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-star"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 图片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li><li><a class="site-page child" href="/idol/"><i class="fa-fw fas fa-heart"></i><span> 我推</span></a></li><li><a class="site-page child" href="/resource/"><i class="fa-fw fa fa-cube"></i><span> 资源网站</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-bookmark"></i><span> 作品集</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/page1/"><i class="fa-fw fa fa-code"></i><span> 悦寝</span></a></li><li><a class="site-page child" href="/page2/"><i class="fa-fw fa fa-code"></i><span> 待定</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-id-card"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://s2.loli.net/2023/03/01/9A3YmNcZrBdtOEK.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Coleduck's Blog"><img class="site-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg"/><span class="site-name">Coleduck's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-edit"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/note/"><i class="fa-fw fa fa-file-text"></i><span> 笔记</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-thumb-tack"></i><span> 记录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fa fa-book"></i><span> 日志</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li><li><a class="site-page child" href="/friend/"><i class="fa-fw fa fa-address-book"></i><span> 同学录</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-star"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 图片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 视频</span></a></li><li><a class="site-page child" href="/idol/"><i class="fa-fw fas fa-heart"></i><span> 我推</span></a></li><li><a class="site-page child" href="/resource/"><i class="fa-fw fa fa-cube"></i><span> 资源网站</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-bookmark"></i><span> 作品集</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/page1/"><i class="fa-fw fa fa-code"></i><span> 悦寝</span></a></li><li><a class="site-page child" href="/page2/"><i class="fa-fw fa fa-code"></i><span> 待定</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-id-card"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Coleduck's Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/coleduck1122" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:coleduck1122@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/14/0004-03/" title="数字图像处理实验3">数字图像处理实验3</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-14T06:09:31.957Z" title="发表于 2023-05-14 14:09:31">2023-05-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">数字图像处理</a></span></div><div class="content">3-A  变换域图像处理题目解答仔细阅读 code_demo\傅里叶变换\目录下的代码 dft_demo.py，编写程序实现：1. 打开 Lenna.jpg，取绿色分量图像左上角为(100,100)，大小为 64*64 的一个正方形区域，作傅立变换，且计算频谱，屏幕打印输出0 &lt;= u, v &lt;= 10范围内的频谱值。傅立叶变换和频谱计算的参考函数下：2. 打开 Lenna.jpg，取绿色分量图像作二维 DFT 变换，将频率坐标的原点移到图像中心位置，按如下形式设置一个 mask，作低通滤波，观察截止范围为 16、32、48 等对逆变换图像的影响。部分参考代码如下3. 打开 Lenna.jpg，取绿色分量图像左上角为(100,100)，大小为 8*8 的一个正方形区域，作傅立叶变换，且计算频谱，根据频谱的中心对称特征，找出分别与位置(2，3)，(3，2)，(3，5)频谱相等的坐标位置。4. 编写代码由 Lenna 局部图像(LennaFace.png)的相位谱与 Flower 局部图像（Flower_1x1.png）的幅度谱混合产生合成图像（结果可参见如下的合成图像）。im ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/14/0004-02/" title="数字图像处理实验2">数字图像处理实验2</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-14T06:09:31.955Z" title="发表于 2023-05-14 14:09:31">2023-05-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">数字图像处理</a></span></div><div class="content">2-A  练习空间域图像处理函数的使用题目解答1. 打开图像 Lenna.jpg，分别使用 OpenCV 的平滑滤波函数：blur()，GaussianBlur()和 medianBlur()对打开的图像进行平滑处理，调整各个函数的参数，通过 imshow()函数观察参数对结果的影响（注：请阅读 PPT 或自行百度上述函数的用法）。2. 打开图像 Lenna.jpg，使用 OpenCV 的 Sobel 算子分别计算 X 和 Y 方向的梯度，使用 imshow()显示 X 和 Y 两个方向的梯度图像（注：可参阅 ftp 中 code_demo的 Sobel.py），通过调整参数，观察参数对结果的影响；3. 打开图像 Lenna.jpg，使用 OpenCV 的 Laplacian 算子对图像进行边缘计算，通过调整参数，观察参数对结果的影响（注：请百度 opencv 的 Laplacian()函数用法）。4. 形如: ker_emb = np.array(([-4, -2, 0], [-1, 1, 1], [0, 2, 4]), dtype=&quot;float32&quot;)定义一个自 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/14/0004-01/" title="数字图像处理实验1">数字图像处理实验1</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-14T06:09:31.953Z" title="发表于 2023-05-14 14:09:31">2023-05-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">数字图像处理</a></span></div><div class="content">1-A  设置 Python + OpenCV + VS Code 开发环境题目解答1. 参考提供的视频“Python-Open-环境.mp4”，设置 Python+OpenCV+VS Code 开发环境；2. 在新建的.py 文件中输入如下代码，观察是否能运行成功。    import cv2    im = cv2.imread(&#x27;Flower.png&#x27;)    cv2.imshow(&#x27;The 1st Window&#x27;, im)    cv2.waitKey()    cv2.destroyAllWindows(&#x27;The 1st Window&#x27;)略
 
 
-2023.3.14 (星期二)今日待办：1.  完成数字图像作业二2.  完成计算机组成原理实验报告一3.  完成马原社会实践的课程报告4.  背诵六级词汇75词5.  背诵初级上日语词汇10词6.  汉英日练字各1面7.  录制视频——在蛋仔里弹琴《花海》8.  在服务器部署QQ机器人9.  在服务器部署博客
+1-B  练习图像分离、截取、转换等函数的使用题目解答1. 打开彩色图像 lenna.jpg，使用 cv2.split()分离红色、绿色和蓝色通道，分别用 imshow() 显示；使用    cv2.merge()将分离后的三通道图像合并成一幅彩色图像，尝试不同的顺序时的结果：        im = cv2.imread(‘lenna.jpg’)        b,g,r  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/14/0003-10/" title="文本分类预测实验">文本分类预测实验</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-14T06:09:31.930Z" title="发表于 2023-05-14 14:09:31">2023-05-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">Python与数据科学</a></span></div><div class="content">Python与数据科学实验8实验数据(1) 训练集训练集包含30000条商品评论，存放于文件&#x27;review_train.csv&#x27;中。每一行代表一条商品评论，第一列是评论的分值`label`，表示该顾客对于当前商品的打分，从1分到5分。第二列是评论的标题， 第三列是评论的具体内容。训练数据集使用pandas读入后(pd.read_csv(&#x27;review_train.csv&#x27;, header=None, names=[&#x27;评分&#x27;, &#x27;标题&#x27;, &#x27;评论&#x27;]))(2) 测试集另有10000条未知评分的测试数据，保存在&#x27;review_test.csv&#x27;文件中。每一行仅给定评论的标题和评论内容（pd.read_csv(&#x27;review_test.csv&#x27;, header=None, names=[&#x27;标题&#x27;, &#x27;评论&#x27;])），而每条商品的评分未知，待建模识别。
+下载链接 
+data.zip
+实验目的(1) 设计文本的特征向量， ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/14/0003-09/" title="蛋白质功能预测实验">蛋白质功能预测实验</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-14T06:09:31.928Z" title="发表于 2023-05-14 14:09:31">2023-05-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">Python与数据科学</a></span></div><div class="content">Python与数据科学实验7实验数据(1)训练集 : 该训练数据集包含1616条蛋白质序列，存放于文件“ProSeqs_Train.txt”。文件中每一行若以空格隔开，内容分别是序列ID、类标号以及蛋白质的氨基酸序列。(2)测试集 : 另有186条未知标签的测试数据，保存在“ProSeqs_Test.txt”文件中。每一行仅给定序列ID及其氨基酸序列，而每条序列的类别(1: 具有某种功能，0: 不具有该功能)未知，待建模识别。
+下载链接 
+data.zip
+实验目的本次实验目标如下：(1) 设计样本的特征向量，具备一定的特征工程能力。(2) 利用机器学习分类算法，基于训练集构建分类器模型；(3) 进而将构建好的分类器模型应用于测试集，给出全体未知标签样本的分类结果，即预测氨基酸序列为功能蛋白或非功能蛋白。
 
+设计思路(1) 具体的机器学习算法不限，以预测效果最佳为目标，追求F1 score越高越好；可以尝试多种学习模型的集成。(2) 需从每条序列中提取特征，表示为固定长度的向量。特征向量设计思路不限，可尝试如下：    (a) 氨基酸组分，即每种氨基酸在蛋白质序列中的比例，可以表示为一 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/14/0003-08/" title="数据挖掘入门分类实验">数据挖掘入门分类实验</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-14T06:09:31.926Z" title="发表于 2023-05-14 14:09:31">2023-05-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">Python与数据科学</a></span></div><div class="content">Python与数据科学实验6实验数据该数据集包含1439条训练数据，存放于“data-train.csv”文件；另有160条未知标签的测试数据，保存在“data-test.csv”文件中。训练集数据共含与某种酒品质相关的11个（匿名）特征属性(f1~f11)和1个目标属性(target)   
+下载链接 
+data-train.csvdata-test.csv
+实验目的本次实验的目的是利用机器学习分类算法，基于训练集构建分类器模型，进而预测测试集中全体样本的分类结果，即测试样本的target 值：A、B 或C（品质：A 优于 B，B优于C）。
 
-2023.3.15 (星期三)今日待办：1.  晚间敷面膜2.  背诵六级词汇25词3.  背诵初级上日语词汇10词4.  汉英日练字各1面5.  完成计算机组成原理实验报告二6.  完成校创课题的数据分析板块7.  完善博客
+实验要求(1) 具体的机器学习算法不限，以预测效果最佳为目标。(2) 将预测结果保存在名为“predictions.txt”的文本文件中，内容为160行， 每一行只有A 或者B或者C，代表你的算法对测试数据的预测结果。预测数据顺序须与测试集“data-test.csv”中的样本顺序保持一致。(3) 将结果文件“predictions.txt”以附件形式提交至学习通。另外请注意：只需提交结果文件，无需提交本次实验报告文件。(4) 本次实验成绩评定 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/14/0003-07/" title="Python科学计算实践">Python科学计算实践</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-14T06:09:31.924Z" title="发表于 2023-05-14 14:09:31">2023-05-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">Python与数据科学</a></span></div><div class="content">Python与数据科学实验5实验目的本次实验旨在了解和掌握python科学计算工具，包括numpy和scipy的数值计算、pandas数据分析、matplotlib画图等，具备快速高效的数据处理和一定的可视化分析能力。需掌握的相关知识点主要包括：1) numpy数组array的创建、使用，数组元素的切片，各种常见函数、通用函数（universal function）的运用，np.random模块组织和获取随机数据，以及numpy对文件数据的处理方法np.loadtxt()和np.savetxt()。了解微积分、线性代数、最优化等领域相关的scipy科学计算方法；2) pandas的数据结构：Series和DataFrame，以及相关数据探索分析方法;3) matplotlib画图：折线图、散点图、柱】状图、直方图、饼图，以及多子图布局方式。（注：请自学matplotlib绘图库，还可以包括seaborn）
 
+实验题目第(1)题题目解答(1) 数组元素索引。利用numpy.random模块随机产生一个9行10列的二维数组，其元素要求服从标准正态分布。完成以下该数组的索引任务，打印输出相关 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/14/0003-06/" title="模块与面向对象编程">模块与面向对象编程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-14T06:09:31.922Z" title="发表于 2023-05-14 14:09:31">2023-05-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">Python与数据科学</a></span></div><div class="content">Python与数据科学实验4实验目的本次实验旨在了解Python的模块、包、类等概念，熟悉常用模块的用法，学会自定义模块，理解Python的程序组织方式，具备面向对象的编程能力。需掌握的相关知识点主要包括：1) 模块及其使用：为最高级别的程序组织单元，将程序代码和数据封装起来以便重用；具有一定功能的程序块，分别用不同的文件名(“*.py”文件)存放，使代码更容易维护和管理；导入模块的方式：import module_name 或 import module_name as * 或 from module_name import *…。常见模块包括：random、time、os、sys、math、string、re等另外，Python脚本和模块都是一个以.py扩展名文件，如何区分？很多脚本的最后都有一段类似下面的判断语句，限制只能以脚本方式运行，不作为模块使用：if __name__ == &#x27;__main__&#x27;:  执行语句… 2) 包：Python文件的一种组织方式，就是将几个功能相近的模块可组成一个Python包，存放到一个目录结构中，通过输入包的路径来调用包中模 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/14/0003-05/" title="Python文件操作与数据读取">Python文件操作与数据读取</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-14T06:09:31.921Z" title="发表于 2023-05-14 14:09:31">2023-05-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">Python与数据科学</a></span></div><div class="content">Python与数据科学实验3实验目的本次实验旨在了解Python的文件数据操作方法，理解和掌握数据存取的各种方式。需掌握的相关知识点主要包括：1) 文件数据读写：掌握文件的打开(open)以及打开模式（’r’,’w’和’a’）、读（read、readline、readlines）、写（write、writelines）方式，并学会with …. as句法，以及数据类型的转化、格式化处理和保存。2) 文件管理：学会应用python的os、os.path、shutil等模块进行文件批量管理。3) 数据永久存储：pickle模块的dump和load方法。注意此时文件对象的打开模式应为二进制形式(‘rb’或‘wb’).
 
-2023.3.16 (星期四)今日待办：1.  背诵六级词汇25词2.  背诵初级上日语词汇10词3.  汉英日练字各1面4.  日本标准语初级上自学20面5.  完成剑指offer(1)
+实验题目第(1)题题目解答(1) 文本文件“info_stocks.txt”中每一行的name对应股票名称，shares对应多少股，price对应该只股票的单价。    (a) 请计算每只股票的总价，并按总价从大到小进行排序(程序中要求含lambda函数) ，将所有股票的名称、单    价、总价依次打印输出。    (b) 要求使用Python内置函数filter过滤出单价大 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/14/0003-04/" title="Python基础语法实践">Python基础语法实践</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-14T06:09:31.918Z" title="发表于 2023-05-14 14:09:31">2023-05-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">Python与数据科学</a></span></div><div class="content">Python与数据科学实验2
+实验目的本次实验旨在了解Python基础语法知识，掌握Python3的基本数据结构、控制结构、函数等，具备数学计算和字符串/文本处理的能力。相关知识点包括：1) 数据结构：列表、元组、字符串、字典、集合;2) 控制结构：条件语句以及条件表达式、while/for循环、break和continue语句、try-except语句3) 函数：函数的定义、函数的参数形式、函数的调用、lambda函数，以及map、filter等内置函数的用法
 
-
-2023.3.17 (星期五)今日待办：1.  背诵六级词汇25词2.  背诵初级上日语词汇10词3.  汉英日练字各1面4.  完成剑指o ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/03/02/%E6%97%A5%E6%A0%87%E5%88%9D%E7%BA%A7%E4%B8%8A(1)/" title="(初级上)日本标准语词汇(1)">(初级上)日本标准语词汇(1)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-03-02T08:54:56.918Z" title="发表于 2023-03-02 16:54:56">2023-03-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0/">日语学习</a></span></div><div class="content">第一周
-
-周一
-
-
-序号
-汉字
-平假名
-罗马音
-释义
-
-
-
-1.
-中国人
-ちゅうごくじん
-chuugokujinn
-中国人
-
-
-2.
-韓国人
-かんこくじん
-kankokujinn
-韩国人
-
-
-3.
-アメリカ人
-あめりかじん
-amerikajin
-n美国人
-
-
-4.
-学生
-がくせい
-gakusei
-学生
-
-
-5.
-先生
-せんせい
-sennsei
-老师
-
-
-6.
-留学生
-りゅうがくせい
-ryuugakusei
-留学生
-
-
-7.
-教授
-きょうじゅ
-kyoujiu
-教授
-
-
-8.
-社員
-しゃいん
-shainn
-社员
-
-
-9.
-会社員
-かいしゃいん
-kaishainn
-公司职员
-
-
-10.
-店員
-てんいん
-tenninn
-店员
-
-
-
-周二
-
-
-序号
-汉字
-平假名
-罗马音
-释义
-
-
-
-1.
-研修生
-けんしゅうせい
-kennshuusei
-进修生
-
-
-2.
-企業
-きぎょう
-kigyou
-企业
-
-
-3.
-大学
-だいがく
-daigaku
-大学
-
-
-4.
-父親
-ちち
-chichi
-父亲
-
-
-5.
-課長
-かちょう
-kachou
-科长
-
-
-6.
-社長
-しゃちょう
-shachou
-公司经理
-
-
-7.
-出迎え
-で ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/03/02/C++%E5%85%A5%E9%97%A8(1)/" title="C++入门(1)">C++入门(1)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-03-02T08:51:04.712Z" title="发表于 2023-03-02 16:51:04">2023-03-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/C-%E8%AF%AD%E6%B3%95%E8%AF%BE/">C + + 语法课</a></span></div><div class="content">第一行代码
-#include &lt;iostream&gt;using namespace std;int main() &#123;    cout &lt;&lt; &quot;Hello World!&quot; &lt;&lt; endl;    return 0;&#125;
-
-
-输入与输出的用法，输入用cin，输出用cout，用 &gt;&gt; 和 &lt;&lt; 来进行传输
-#include &lt;iostream&gt;#include &lt;string&gt;using namespace std;int main() &#123;        string name;    int age;    cin &gt;&gt; name &gt;&gt; age;    cout &lt;&lt; &quot;Hello my name is&quot; &lt;&lt; name          &lt;&lt; &quot;, I&#x27;m &quot; &lt;&lt; age &lt;&lt; &quot;years old!&quot; & ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/03/02/Python%E5%85%A5%E9%97%A8(1)/" title="Python入门(1)">Python入门(1)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-03-02T06:50:42.105Z" title="发表于 2023-03-02 14:50:42">2023-03-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Python%E8%AF%AD%E6%B3%95%E8%AF%BE/">Python语法课</a></span></div><div class="content">第一行代码
-print(&quot;Hello World!&quot;)
-
-
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/03/02/C%E8%AF%AD%E8%A8%80(1)/" title="C语言入门(1)">C语言入门(1)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-03-02T06:49:10.964Z" title="发表于 2023-03-02 14:49:10">2023-03-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/C%E8%AF%AD%E8%A8%80%E8%AF%AD%E6%B3%95%E8%AF%BE/">C语言语法课</a></span></div><div class="content">第一行代码
-#include &lt;stdio.h&gt;int main() &#123;    printf(&quot;Hello World!\n&quot;);    return 0;&#125;
-
-
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/03/02/Java%E5%85%A5%E9%97%A8(1)/" title="Java入门(1)">Java入门(1)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-03-02T06:48:56.988Z" title="发表于 2023-03-02 14:48:56">2023-03-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java%E8%AF%AD%E6%B3%95%E8%AF%BE/">Java语法课</a></span></div><div class="content">public class HelloWorld &#123;    public static void main(String[] args) &#123;        System.out.println(&quot;Hello World!&quot;);    &#125;&#125;
-
-
-</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Coleduck</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/12848975/"><i></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/coleduck1122" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:coleduck1122@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/22/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E5%AE%9E%E9%AA%8C(1)/" title="数字图像处理实验1">数字图像处理实验1</a><time datetime="2023-03-22T04:36:23.257Z" title="发表于 2023-03-22 12:36:23">2023-03-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/22/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%9E%E9%AA%8C(1)/" title="Python与数据科学实验1 - Python入门练习">Python与数据科学实验1 - Python入门练习</a><time datetime="2023-03-22T04:12:54.391Z" title="发表于 2023-03-22 12:12:54">2023-03-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/22/%E8%AE%A1%E7%BB%84%E5%AE%9E%E9%AA%8C(3)/" title="计组实验3 - 移位运算器实验">计组实验3 - 移位运算器实验</a><time datetime="2023-03-22T03:23:21.080Z" title="发表于 2023-03-22 11:23:21">2023-03-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/21/%E5%89%91%E6%8C%87offer(6)/" title="第 6 天 搜索与回溯算法（简单）">第 6 天 搜索与回溯算法（简单）</a><time datetime="2023-03-21T07:23:20.391Z" title="发表于 2023-03-21 15:23:20">2023-03-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/21/%E5%89%91%E6%8C%87offer(5)/" title="第 5 天 查找算法（中等）">第 5 天 查找算法（中等）</a><time datetime="2023-03-21T07:22:35.311Z" title="发表于 2023-03-21 15:22:35">2023-03-21</time></div></div></div></div><div class="card-widget" id="card-newest-comments"><div class="item-headline"><i class="fas fa-comment-dots"></i><span>最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div><div class="card-widget card-categories"><div class="item-headline">
+实验题目第(1)题题目解答(1) 编写函数，接收一个字符串，分别统计大写字母、小写字母、数字、其他字符的个数，并以元组的形式返回结果。字符串通过input输入，然后调用该函数，并打印出函数的返回值。def function(s):    cnt_upper = 0    cnt_lower = 0    cnt_digit = 0    cnt_other = 0    for i in s:        if (&#x27;A&#x27; &lt;= i &lt;= &#x27;Z&#x27;):             ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/4/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/03/01/PakOtNvWUL6xfln.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Coleduck</div><div class="author-info__description">我永远喜欢初音未来</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/12848975/"><i></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/coleduck1122" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:coleduck1122@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">学业繁忙 + 本人很懒，所以目前只记录了作业不常更新有趣的内容hhh</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/18/0001-10/" title="杭州义益计组软件仿真 - 指令设计综合实验">杭州义益计组软件仿真 - 指令设计综合实验</a><time datetime="2023-06-18T03:38:39.568Z" title="发表于 2023-06-18 11:38:39">2023-06-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/18/0001-09/" title="杭州义益计组软件仿真 - 带移位模型机实验">杭州义益计组软件仿真 - 带移位模型机实验</a><time datetime="2023-06-18T03:38:33.138Z" title="发表于 2023-06-18 11:38:33">2023-06-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/18/0002-09/" title="Qt实验 - 二维绘图">Qt实验 - 二维绘图</a><time datetime="2023-06-18T03:20:03.408Z" title="发表于 2023-06-18 11:20:03">2023-06-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/05/14/0001-08/" title="杭州义益计组软件仿真 - 简单模型机循环加(减)法实验">杭州义益计组软件仿真 - 简单模型机循环加(减)法实验</a><time datetime="2023-05-14T06:09:32.006Z" title="发表于 2023-05-14 14:09:32">2023-05-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/05/14/0001-07/" title="杭州义益计组软件仿真 - 存储器读写实验">杭州义益计组软件仿真 - 存储器读写实验</a><time datetime="2023-05-14T06:09:32.005Z" title="发表于 2023-05-14 14:09:32">2023-05-14</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
             <i class="fas fa-folder-open"></i>
             <span>分类</span>
-            <a class="card-more-btn" href="/categories/" title="查看更多">
-    <i class="fas fa-angle-right"></i></a>
+            
             </div>
             <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-%E8%AF%AD%E6%B3%95%E8%AF%BE/"><span class="card-category-list-name">C + + 语法课</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/"><span class="card-category-list-name">C++桌面应用程序</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C%E8%AF%AD%E8%A8%80%E8%AF%AD%E6%B3%95%E8%AF%BE/"><span class="card-category-list-name">C语言语法课</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Java%E8%AF%AD%E6%B3%95%E8%AF%BE/"><span class="card-category-list-name">Java语法课</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/"><span class="card-category-list-name">Python与数据科学</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Python%E8%AF%AD%E6%B3%95%E8%AF%BE/"><span class="card-category-list-name">Python语法课</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%91%E6%8C%87offer%E5%88%B7%E9%A2%98%E6%89%8B%E5%86%8C/"><span class="card-category-list-name">剑指offer刷题手册</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"><span class="card-category-list-name">数字图像处理</span><span class="card-category-list-count">1</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/OpenCV/" style="font-size: 1.1em; color: #999">OpenCV</a> <a href="/tags/%E8%83%8C%E5%8D%95%E8%AF%8D/" style="font-size: 1.33em; color: #99a2af">背单词</a> <a href="/tags/%E6%97%A5%E6%9C%AC%E6%A0%87%E5%87%86%E8%AF%AD/" style="font-size: 1.21em; color: #999ea4">日本标准语</a> <a href="/tags/Java/" style="font-size: 1.1em; color: #999">Java</a> <a href="/tags/Python/" style="font-size: 1.33em; color: #99a2af">Python</a> <a href="/tags/Visual-Studio/" style="font-size: 1.16em; color: #999b9e">Visual Studio</a> <a href="/tags/%E8%AE%B0%E5%BD%95/" style="font-size: 1.1em; color: #999">记录</a> <a href="/tags/%E9%9F%B3%E4%B9%90/" style="font-size: 1.1em; color: #999">音乐</a> <a href="/tags/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/" style="font-size: 1.44em; color: #99a7ba">实验报告</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" style="font-size: 1.21em; color: #999ea4">计算机组成原理</a> <a href="/tags/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" style="font-size: 1.1em; color: #999">数字图像处理</a> <a href="/tags/Visual-Studio-Code/" style="font-size: 1.1em; color: #999">Visual Studio Code</a> <a href="/tags/C/" style="font-size: 1.21em; color: #999ea4">C++</a> <a href="/tags/%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/" style="font-size: 1.16em; color: #999b9e">桌面应用程序</a> <a href="/tags/%E8%8B%B1%E8%AF%AD%E5%85%AD%E7%BA%A7/" style="font-size: 1.16em; color: #999b9e">英语六级</a> <a href="/tags/%E8%AF%BE%E7%A8%8B/" style="font-size: 1.27em; color: #99a0a9">课程</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E9%A2%98/" style="font-size: 1.39em; color: #99a4b4">编程题</a> <a href="/tags/C/" style="font-size: 1.1em; color: #999">C</a> <a href="/tags/%E4%BD%9C%E4%B8%9A/" style="font-size: 1.5em; color: #99a9bf">作业</a> <a href="/tags/%E4%B8%93%E4%B8%9A%E8%AF%BE/" style="font-size: 1.5em; color: #99a9bf">专业课</a> <a href="/tags/%E6%97%A5%E8%AF%AD/" style="font-size: 1.1em; color: #999">日语</a> <a href="/tags/%E5%89%91%E6%8C%87offer/" style="font-size: 1.39em; color: #99a4b4">剑指offer</a> <a href="/tags/%E5%8A%9B%E6%89%A3/" style="font-size: 1.39em; color: #99a4b4">力扣</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/" style="font-size: 1.21em; color: #999ea4">数据科学</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><span class="card-archive-list-count">26</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">26</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2023-03-01T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-03-22T05:00:42.103Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background: linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347)"><div id="footer-wrap"><div class="copyright">&copy;2023 By Coleduck</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script>function panguFn () {
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/"><span class="card-category-list-name">C++桌面应用程序</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/"><span class="card-category-list-name">Python与数据科学</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"><span class="card-category-list-name">数字图像处理</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E8%AF%BE/"><span class="card-category-list-name">计算机组成原理实验课</span><span class="card-category-list-count">10</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Python/" style="font-size: 1.39em; color: #99a4b4">Python</a> <a href="/tags/%E4%BD%9C%E4%B8%9A/" style="font-size: 1.5em; color: #99a9bf">作业</a> <a href="/tags/Visual-Studio-Code/" style="font-size: 1.16em; color: #999b9e">Visual Studio Code</a> <a href="/tags/%E4%B8%93%E4%B8%9A%E8%AF%BE/" style="font-size: 1.5em; color: #99a9bf">专业课</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" style="font-size: 1.33em; color: #99a2af">计算机组成原理</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/" style="font-size: 1.33em; color: #99a2af">数据科学</a> <a href="/tags/C/" style="font-size: 1.27em; color: #99a0a9">C++</a> <a href="/tags/OpenCV/" style="font-size: 1.16em; color: #999b9e">OpenCV</a> <a href="/tags/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/" style="font-size: 1.44em; color: #99a7ba">实验报告</a> <a href="/tags/EDA%E5%AE%9E%E9%AA%8C%E7%AE%B1/" style="font-size: 1.1em; color: #999">EDA实验箱</a> <a href="/tags/QT-creator/" style="font-size: 1.21em; color: #999ea4">QT creator</a> <a href="/tags/Logisim/" style="font-size: 1.1em; color: #999">Logisim</a> <a href="/tags/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" style="font-size: 1.16em; color: #999b9e">数字图像处理</a> <a href="/tags/Visual-Studio/" style="font-size: 1.16em; color: #999b9e">Visual Studio</a> <a href="/tags/%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/" style="font-size: 1.27em; color: #99a0a9">桌面应用程序</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><span class="card-archive-list-count">30</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">33</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2023-03-01T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-06-28T02:56:28.897Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background: linear-gradient(39deg, #39C5BB 0%, #39C5BB 100%)"><div id="footer-wrap"><div class="copyright">&copy;2023 By Coleduck</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">浙ICP备2023006941号-1</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script>function panguFn () {
   if (typeof pangu === 'object') pangu.autoSpacingPage()
   else {
     getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
@@ -410,115 +246,13 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-
   }
 }
 </script><script>function subtitleType () {
-  fetch('https://v1.hitokoto.cn')
-    .then(response => response.json())
-    .then(data => {
-      if (true) {
-        const from = '出自 ' + data.from
-        const sub = ["如果你在看，我就是你的风景。如果你在听，我该有多幸运。","余生向阳，往后如意。","出自  鹤空流乂「源初幻想」","人生三大错觉，我能反杀，下一发能出金，她喜欢我。","出自  林清凝「现实」","兰有秀兮菊有芳，怀佳人兮不能忘。","出自  刘彻「秋风辞」","人生于我，一场豪赌而已。","出自  刘慈欣「赡养人类」","人生于我，一场豪赌而已。","出自  刘慈欣「赡养人类」","大本钟下送快递——上面摆，下面寄。","出自  记得「饭堂周末夜」","虽然人生在世有种种不如意，但你仍可以在幸福与不幸中做选择。","出自  王小波「写给新的一年」","当你真正想做成一件事情的时候，就连天地万物都会帮你。","出自  褚嬴「网剧棋魂」","和绝望，和睦相处","出自  「少女终末旅行」","我之所以想变强，是为了活得轻松写意。","出自  「一拳超人」","秦时明月汉时关，万里长征人未还。","出自  王昌龄「出塞二首·其一」","对未来真正的慷慨，是把一切都献给现在。","出自  加缪「加缪」","游蕲水清泉寺，寺临兰溪，溪水西流。","出自  苏轼「浣溪沙」"]
-        sub.unshift(data.hitokoto, from)
-        typedJSFn.init(sub)
-      } else {
-        document.getElementById('subtitle').innerHTML = data.hitokoto
-      }
-    })
+  if (true) {
+    typedJSFn.init(["初始之音，响彻未来"])
+  } else {
+    document.getElementById("subtitle").innerHTML = '初始之音，响彻未来'
+  }
 }
-typedJSFn.run(subtitleType)
-</script></div><script src="https://cdn.jsdelivr.net/npm/blueimp-md5/js/md5.min.js"></script><script>window.addEventListener('load', () => {
-  const changeContent = (content) => {
-    if (content === '') return content
-
-    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
-    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
-    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
-    content = content.replace(/<[^>]+>/g,"") // remove html tag
-
-    if (content.length > 150) {
-      content = content.substring(0,150) + '...'
-    }
-    return content
-  }
-
-  const getIcon = (icon, mail) => {
-    if (icon) return icon
-    let defaultIcon = '?d=monsterid'
-    let iconUrl = `https://gravatar.loli.net/avatar/${md5(mail.toLowerCase()) + defaultIcon}`
-    return iconUrl
-  }
-
-  const generateHtml = array => {
-    let result = ''
-
-    if (array.length) {
-      for (let i = 0; i < array.length; i++) {
-        result += '<div class=\'aside-list-item\'>'
-
-        if (true) {
-          const name = 'data-lazy-src'
-          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
-        }
-
-        result += `<div class='content'>
-        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
-        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
-        </div></div>`
-      }
-    } else {
-      result += '没有评论'
-    }
-
-    let $dom = document.querySelector('#card-newest-comments .aside-list')
-    $dom.innerHTML= result
-    window.lazyLoadInstance && window.lazyLoadInstance.update()
-    window.pjax && window.pjax.refresh($dom)
-  }
-
-  const getComment = () => {
-    const serverURL = 'https://UqsNwptm.api.lncldglobal.com'
-
-    var settings = {
-      "method": "GET",
-      "headers": {
-        "X-LC-Id": 'UqsNwptmMTTWLuT0aqQ3o247-MdYXbMMI',
-        "X-LC-Key": 'oaJU1IoXJqq4UtRMW5Mfrt2R',
-        "Content-Type": "application/json"
-      },
-    }
-
-    fetch(`${serverURL}/1.1/classes/Comment?limit=6&order=-createdAt`,settings)
-      .then(response => response.json())
-      .then(data => {
-        const valineArray = data.results.map(function (e) {
-          return {
-            'avatar': getIcon(e.QQAvatar, e.mail),
-            'content': changeContent(e.comment),
-            'nick': e.nick,
-            'url': e.url + '#' + e.objectId,
-            'date': e.updatedAt,
-          }
-        })
-        saveToLocal.set('valine-newest-comments', JSON.stringify(valineArray), 10/(60*24))
-        generateHtml(valineArray)
-      }).catch(e => {
-        const $dom = document.querySelector('#card-newest-comments .aside-list')
-        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
-      }) 
-  }
-
-  const newestCommentInit = () => {
-    if (document.querySelector('#card-newest-comments .aside-list')) {
-      const data = saveToLocal.get('valine-newest-comments')
-      if (data) {
-        generateHtml(JSON.parse(data))
-      } else {
-        getComment()
-      }
-    }
-  }
-
-  newestCommentInit()
-  document.addEventListener('pjax:complete', newestCommentInit)
-})</script><div class="aplayer no-destroy" data-id="7746777058" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+typedJSFn.run(subtitleType)</script></div><div class="aplayer no-destroy" data-id="8201461411" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
 POWERMODE.shake = true;
 POWERMODE.mobile = false;
 document.body.addEventListener('input', POWERMODE);
@@ -553,7 +287,7 @@ if (true) {
 }</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
 
 var pjax = new Pjax({
-  elements: 'a:not([target="_blank"]):not([href="/music/"]):not([href="/no-pjax/"])',
+  elements: 'a:not([target="_blank"]):not([href="/no-pjax/"])',
   selectors: pjaxSelectors,
   cacheBust: false,
   analytics: false,
